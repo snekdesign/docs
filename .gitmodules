@@ -1,0 +1,8 @@
+[submodule "CppCoreGuidelines"]
+	path = CppCoreGuidelines/docs
+	url = git@github.com:isocpp/CppCoreGuidelines.git
+	branch = master
+[submodule "styleguide"]
+	path = styleguide/docs
+	url = git@github.com:google/styleguide.git
+	branch = gh-pages
