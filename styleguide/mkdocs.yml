@@ -44,6 +44,13 @@ not_in_nav: |
 
 plugins:
 - macros
+- minify:
+    minify_html: true
+    minify_js: true
+    minify_css: true
+    htmlmin_opts:
+      remove_comments: true
+    cache_safe: true
 
 markdown_extensions:
 - def_list
