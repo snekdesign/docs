@@ -1,0 +1,1378 @@
+site_name: PowerShell
+docs_dir: docs/reference
+
+theme:
+  name: material
+  features:
+  - header.autohide
+  - navigation.top
+  - toc.follow
+
+nav:
+- How to use this documentation: docs-conceptual/how-to-use-docs.md
+- Overview:
+  - What is PowerShell?: docs-conceptual/overview.md
+  - What is Windows PowerShell?: docs-conceptual/what-is-windows-powershell.md
+  - What is a PowerShell command?: docs-conceptual/powershell-commands.md
+  - Discover PowerShell: docs-conceptual/discover-powershell.md
+- Install:
+  - Installing PowerShell on Windows: docs-conceptual/install/Installing-PowerShell-on-Windows.md
+  - Installing PowerShell on Linux:
+    - Overview: docs-conceptual/install/Installing-PowerShell-on-Linux.md
+    - Installing on Alpine: docs-conceptual/install/install-alpine.md
+    - Installing on Debian: docs-conceptual/install/install-debian.md
+    - Installing on RHEL: docs-conceptual/install/install-rhel.md
+    - Installing on Ubuntu: docs-conceptual/install/install-ubuntu.md
+    - Community support for Linux: docs-conceptual/install/community-support.md
+    - Alternate ways to install on Linux: docs-conceptual/install/install-other-linux.md
+  - Installing PowerShell on macOS: docs-conceptual/install/Installing-PowerShell-on-macOS.md
+  - Installing PowerShell on Arm: docs-conceptual/install/PowerShell-on-ARM.md
+  - Using PowerShell in Docker: docs-conceptual/install/PowerShell-in-Docker.md
+- Learning PowerShell:
+  - PowerShell 101:
+    - Introduction: docs-conceptual/learn/ps101/00-introduction.md
+    - Getting started with PowerShell: docs-conceptual/learn/ps101/01-getting-started.md
+    - The Help system: docs-conceptual/learn/ps101/02-help-system.md
+    - Discovering objects, properties, and methods: docs-conceptual/learn/ps101/03-discovering-objects.md
+    - One-liners and the pipeline: docs-conceptual/learn/ps101/04-pipelines.md
+    - Formatting, aliases, providers, comparison: docs-conceptual/learn/ps101/05-formatting-aliases-providers-comparison.md
+    - Flow control: docs-conceptual/learn/ps101/06-flow-control.md
+    - Working with WMI: docs-conceptual/learn/ps101/07-working-with-wmi.md
+    - PowerShell remoting: docs-conceptual/learn/ps101/08-powershell-remoting.md
+    - Functions: docs-conceptual/learn/ps101/09-functions.md
+    - Script modules: docs-conceptual/learn/ps101/10-script-modules.md
+    - Appendix A - Help Syntax: docs-conceptual/learn/ps101/appendix-a.md
+  - Optimizing your shell experience:
+    - Overview of the Shell: docs-conceptual/learn/shell/optimize-shell.md
+    - Running commands in the Shell: docs-conceptual/learn/shell/running-commands.md
+    - Using tab completion: docs-conceptual/learn/shell/tab-completion.md
+    - Using command predictors: docs-conceptual/learn/shell/using-predictors.md
+    - Getting dynamic help: docs-conceptual/learn/shell/dynamic-help.md
+    - Using aliases: docs-conceptual/learn/shell/using-aliases.md
+    - Customizing your shell environment: docs-conceptual/learn/shell/creating-profiles.md
+    - Using PSReadLine key handlers: docs-conceptual/learn/shell/using-keyhandlers.md
+    - Configuring a light colored theme: docs-conceptual/learn/shell/using-light-theme.md
+    - Improve the accessibility of output in PowerShell: docs-conceptual/learn/shell/output-for-screen-reader.md
+  - Deep dives:
+    - Overview: docs-conceptual/learn/deep-dives/overview.md
+    - Everything you want to know about ...:
+      - Everything you want to know about arrays: docs-conceptual/learn/deep-dives/everything-about-arrays.md
+      - Everything you want to know about hashtables: docs-conceptual/learn/deep-dives/everything-about-hashtable.md
+      - Everything you want to know about PSCustomObject: docs-conceptual/learn/deep-dives/everything-about-pscustomobject.md
+      - Everything you want to know about string substitution: docs-conceptual/learn/deep-dives/everything-about-string-substitutions.md
+      - Everything you want to know about if/then/else: docs-conceptual/learn/deep-dives/everything-about-if.md
+      - Everything you want to know about switch: docs-conceptual/learn/deep-dives/everything-about-switch.md
+      - Everything you want to know about exceptions: docs-conceptual/learn/deep-dives/everything-about-exceptions.md
+      - Everything you want to know about $null: docs-conceptual/learn/deep-dives/everything-about-null.md
+      - Everything you want to know about ShouldProcess: docs-conceptual/learn/deep-dives/everything-about-shouldprocess.md
+      - Visualize parameter binding: docs-conceptual/learn/deep-dives/visualize-parameter-binding.md
+    - Write-Progress while multithreading: docs-conceptual/learn/deep-dives/write-progress-across-multiple-threads.md
+    - Add Credential support to PowerShell functions: docs-conceptual/learn/deep-dives/add-credentials-to-powershell-functions.md
+    - Avoid assigning variables in expressions: docs-conceptual/learn/deep-dives/avoid-assigning-variables-in-expressions.md
+    - Avoid using Invoke-Expression: docs-conceptual/learn/deep-dives/avoid-using-invoke-expression.md
+    - Limitations of PowerShell transcripts: docs-conceptual/learn/deep-dives/output-missing-from-transcript.md
+  - Sample scripts:
+    - Working with objects:
+      - Viewing object structure: docs-conceptual/samples/Viewing-Object-Structure--Get-Member-.md
+      - Selecting parts of objects: docs-conceptual/samples/Selecting-Parts-of-Objects--Select-Object-.md
+      - Removing objects from the pipeline: docs-conceptual/samples/Removing-Objects-from-the-Pipeline--Where-Object-.md
+      - Sorting objects: docs-conceptual/samples/Sorting-Objects.md
+      - Creating .NET and COM objects: docs-conceptual/samples/Creating-.NET-and-COM-Objects--New-Object-.md
+      - Using static classes and methods: docs-conceptual/samples/Using-Static-Classes-and-Methods.md
+      - Getting WMI objects: docs-conceptual/samples/Getting-WMI-Objects--Get-CimInstance-.md
+      - Manipulating items directly: docs-conceptual/samples/Manipulating-Items-Directly.md
+    - Managing computers:
+      - Changing computer state: docs-conceptual/samples/Changing-Computer-State.md
+      - Collecting information about computers: docs-conceptual/samples/Collecting-Information-About-Computers.md
+      - Creating Get-WinEvent queries with FilterHashtable: docs-conceptual/samples/Creating-Get-WinEvent-queries-with-FilterHashtable.md
+    - Managing processes & services:
+      - Managing processes with process cmdlets: docs-conceptual/samples/Managing-Processes-with-Process-Cmdlets.md
+      - Managing services: docs-conceptual/samples/Managing-Services.md
+      - Working with printers: docs-conceptual/samples/Working-with-Printers.md
+      - Performing networking tasks: docs-conceptual/samples/Performing-Networking-Tasks.md
+      - Working with software installations: docs-conceptual/samples/Working-with-Software-Installations.md
+      - Decode a PowerShell command from a running process: docs-conceptual/samples/Decode-PowerShell-Command-from-a-Running-Process.md
+    - Working with output:
+      - Redirecting data with Out-* cmdlets: docs-conceptual/samples/Redirecting-Data-with-Out---Cmdlets.md
+      - Using Format commands to change output view: docs-conceptual/samples/Using-Format-Commands-to-Change-Output-View.md
+    - Manage drives & files:
+      - Managing current location: docs-conceptual/samples/Managing-Current-Location.md
+      - Managing PowerShell drives: docs-conceptual/samples/Managing-Windows-PowerShell-Drives.md
+      - Working with files and folders: docs-conceptual/samples/Working-with-Files-and-Folders.md
+      - Working with files, folders, and registry keys: docs-conceptual/samples/Working-With-Files-Folders-and-Registry-Keys.md
+      - Working with registry entries: docs-conceptual/samples/Working-with-Registry-Entries.md
+      - Working with registry keys: docs-conceptual/samples/Working-with-Registry-Keys.md
+    - Creating UI elements:
+      - Creating a custom input box: docs-conceptual/samples/Creating-a-Custom-Input-Box.md
+      - Creating a graphical date picker: docs-conceptual/samples/Creating-a-Graphical-Date-Picker.md
+      - Multiple selection list boxes: docs-conceptual/samples/Multiple-selection-List-Boxes.md
+      - Selecting items from a list box: docs-conceptual/samples/Selecting-Items-from-a-List-Box.md
+  - Using Experimental Features: docs-conceptual/learn/experimental-features.md
+  - Additional resources: docs-conceptual/learn/more-powershell-learning.md
+  - Glossary: docs-conceptual/learn/Glossary.md
+- What's New in PowerShell:
+  - What's new in PowerShell 7.5: docs-conceptual/whats-new/What-s-New-in-PowerShell-75.md
+  - What's new in PowerShell 7.4: docs-conceptual/whats-new/What-s-New-in-PowerShell-74.md
+  - What's new in PowerShell 7.3: docs-conceptual/whats-new/What-s-New-in-PowerShell-73.md
+  - What's new in PowerShell 7.2: docs-conceptual/whats-new/What-s-New-in-PowerShell-72.md
+  - Migrating from Windows PowerShell 5.1 to PowerShell 7: docs-conceptual/whats-new/Migrating-from-Windows-PowerShell-51-to-PowerShell-7.md
+  - Differences between Windows PowerShell 5.1 and PowerShell 7.x: docs-conceptual/whats-new/differences-from-windows-powershell.md
+  - PowerShell differences on non-Windows platforms: docs-conceptual/whats-new/unix-support.md
+  - Module and cmdlet release history: docs-conceptual/whats-new/cmdlet-versions.md
+  - Module compatibility: docs-conceptual/whats-new/module-compatibility.md
+- Windows PowerShell:
+  - ISE:
+    - Introducing the Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/Introducing-the-Windows-PowerShell-ISE.md
+    - Using the Windows PowerShell ISE:
+      - Exploring the Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/Exploring-the-Windows-PowerShell-ISE.md
+      - How to Create a PowerShell Tab in Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/How-to-Create-a-PowerShell-Tab-in-Windows-PowerShell-ISE.md
+      - How to debug scripts in Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/How-to-Debug-Scripts-in-Windows-PowerShell-ISE.md
+      - How to use profiles in Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/How-to-Use-Profiles-in-Windows-PowerShell-ISE.md
+      - How to use tab completion in the script and console panes: docs-conceptual/windows-powershell/ise/How-to-Use-Tab-Completion-in-the-Script-Pane-and-Console-Pane.md
+      - How to use the console pane in the Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/How-to-Use-the-Console-Pane-in-the-Windows-PowerShell-ISE.md
+      - How to write and run scripts in the Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/How-to-Write-and-Run-Scripts-in-the-Windows-PowerShell-ISE.md
+      - Keyboard shortcuts for the Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/Keyboard-Shortcuts-for-the-Windows-PowerShell-ISE.md
+      - Accessibility in Windows PowerShell ISE: docs-conceptual/windows-powershell/ise/Accessibility-in-Windows-PowerShell-ISE.md
+    - The ISE scripting object model:
+      - Purpose of the Windows PowerShell ISE Scripting Object Model: docs-conceptual/windows-powershell/ise/object-model/Purpose-of-the-Windows-PowerShell-ISE-Scripting-Object-Model.md
+      - The ISE object model hierarchy: docs-conceptual/windows-powershell/ise/object-model/The-ISE-Object-Model-Hierarchy.md
+      - The ObjectModelRoot object: docs-conceptual/windows-powershell/ise/object-model/The-ObjectModelRoot-Object.md
+      - The ISEAddOnToolCollection object: docs-conceptual/windows-powershell/ise/object-model/The-ISEAddOnToolCollection-Object.md
+      - The ISEAddOnTool object: docs-conceptual/windows-powershell/ise/object-model/The-ISEAddOnTool-Object.md
+      - The ISEEditor object: docs-conceptual/windows-powershell/ise/object-model/The-ISEEditor-Object.md
+      - The ISEFileCollection object: docs-conceptual/windows-powershell/ise/object-model/The-ISEFileCollection-Object.md
+      - The ISEFile object: docs-conceptual/windows-powershell/ise/object-model/The-ISEFile-Object.md
+      - The ISEMenuItemCollection Object: docs-conceptual/windows-powershell/ise/object-model/The-ISEMenuItemCollection-Object.md
+      - The ISEMenuItem object: docs-conceptual/windows-powershell/ise/object-model/The-ISEMenuItem-Object.md
+      - The ISEOptions object: docs-conceptual/windows-powershell/ise/object-model/The-ISEOptions-Object.md
+      - The ISESnippetCollection object: docs-conceptual/windows-powershell/ise/object-model/The-ISESnippetCollection-Object.md
+      - The ISESnippetObject: docs-conceptual/windows-powershell/ise/object-model/The-ISESnippetObject.md
+      - The PowerShellTabCollection object: docs-conceptual/windows-powershell/ise/object-model/The-PowerShellTabCollection-Object.md
+      - The PowerShellTab object: docs-conceptual/windows-powershell/ise/object-model/The-PowerShellTab-Object.md
+      - Other useful scripting objects: docs-conceptual/windows-powershell/ise/object-model/Other-Useful-Scripting-Objects.md
+  - Starting Windows PowerShell: docs-conceptual/windows-powershell/Starting-Windows-PowerShell.md
+  - Windows Management Framework (WMF): docs-conceptual/windows-powershell/wmf-overview.md
+- Security:
+  - PowerShell security features: docs-conceptual/security/security-features.md
+  - Using Application Control: docs-conceptual/security/application-control.md
+  - Preventing script injection attacks: docs-conceptual/security/preventing-script-injection.md
+  - Securing a restricted PowerShell remoting session: docs-conceptual/security/securing-restricted-sessions.md
+  - PowerShell remoting:
+    - Just Enough Administration (JEA):
+      - Overview: docs-conceptual/security/remoting/jea/overview.md
+      - Prerequisites: docs-conceptual/security/remoting/jea/prerequisites.md
+      - Role Capabilities: docs-conceptual/security/remoting/jea/role-capabilities.md
+      - Session Configurations: docs-conceptual/security/remoting/jea/session-configurations.md
+      - Registering JEA: docs-conceptual/security/remoting/jea/register-jea.md
+      - Using JEA: docs-conceptual/security/remoting/jea/using-jea.md
+      - Security Considerations: docs-conceptual/security/remoting/jea/security-considerations.md
+      - Audit and Report on JEA: docs-conceptual/security/remoting/jea/audit-and-report.md
+    - Running remote commands: docs-conceptual/security/remoting/Running-Remote-Commands.md
+    - PowerShell remoting over SSH: docs-conceptual/security/remoting/SSH-Remoting-in-PowerShell.md
+    - WS-Management (WSMan) remoting in PowerShell: docs-conceptual/security/remoting/WSMan-Remoting-in-PowerShell.md
+    - WinRM Security: docs-conceptual/security/remoting/WinRM-Security.md
+    - Making the second hop in PowerShell Remoting: docs-conceptual/security/remoting/PS-remoting-second-hop.md
+- Desired State Configuration (DSC): docs-conceptual/dsc/overview.md
+- PowerShell Gallery: docs-conceptual/gallery/overview.md
+- Community:
+  - Community support: docs-conceptual/community/community-support.md
+  - Contributor Hall of Fame: docs-conceptual/community/hall-of-fame.md
+  - What's new in Docs:
+    - 2024 Updates: docs-conceptual/community/2024-updates.md
+    - 2023 Updates: docs-conceptual/community/2023-updates.md
+    - 2022 Updates: docs-conceptual/community/2022-updates.md
+    - 2021 Updates: docs-conceptual/community/2021-updates.md
+    - 2020 Updates: docs-conceptual/community/2020-updates.md
+  - Digital art: docs-conceptual/community/digital-art.md
+- Scripting and development:
+  - Visual Studio Code:
+    - Using Visual Studio Code: docs-conceptual/dev-cross-plat/vscode/using-vscode.md
+    - How to replicate the ISE experience in VS Code: docs-conceptual/dev-cross-plat/vscode/How-To-Replicate-the-ISE-Experience-In-VSCode.md
+    - Using VS Code for remote editing and debugging: docs-conceptual/dev-cross-plat/vscode/Using-VSCode-for-Remote-Editing-and-Debugging.md
+    - Understanding file encoding in VS Code and PowerShell: docs-conceptual/dev-cross-plat/vscode/understanding-file-encoding.md
+    - Using VS Code to debug compiled cmdlets: docs-conceptual/dev-cross-plat/vscode/using-vscode-for-debugging-compiled-cmdlets.md
+  - Performance considerations:
+    - Scripting performance considerations: docs-conceptual/dev-cross-plat/performance/script-authoring-considerations.md
+    - Module performance considerations: docs-conceptual/dev-cross-plat/performance/module-authoring-considerations.md
+  - Developing modern modules:
+    - Writing portable modules: docs-conceptual/dev-cross-plat/Writing-Portable-Modules.md
+    - How to create a Standard Library binary module: docs-conceptual/dev-cross-plat/create-standard-library-binary-Module.md
+    - Choosing the right NuGet package for your .NET project: docs-conceptual/dev-cross-plat/choosing-the-right-nuget-package.md
+    - Resolving module assembly dependency conflicts: docs-conceptual/dev-cross-plat/resolving-dependency-conflicts.md
+    - Creating a command-line predictor: docs-conceptual/dev-cross-plat/create-cmdline-predictor.md
+    - Creating a feedback provider: docs-conceptual/dev-cross-plat/create-feedback-provider.md
+  - PowerShell Language Specification 3.0:
+    - 1. Introduction: docs-conceptual/lang-spec/chapter-01.md
+    - 2. Lexical Structure: docs-conceptual/lang-spec/chapter-02.md
+    - 3. Basic concepts: docs-conceptual/lang-spec/chapter-03.md
+    - 4. Types: docs-conceptual/lang-spec/chapter-04.md
+    - 5. Variables: docs-conceptual/lang-spec/chapter-05.md
+    - 6. Conversions: docs-conceptual/lang-spec/chapter-06.md
+    - 7. Expressions: docs-conceptual/lang-spec/chapter-07.md
+    - 8. Statements: docs-conceptual/lang-spec/chapter-08.md
+    - 9. Arrays: docs-conceptual/lang-spec/chapter-09.md
+    - 10. Hashtables: docs-conceptual/lang-spec/chapter-10.md
+    - 11. Modules: docs-conceptual/lang-spec/chapter-11.md
+    - 12. Attributes: docs-conceptual/lang-spec/chapter-12.md
+    - 13. Cmdlets: docs-conceptual/lang-spec/chapter-13.md
+    - A. Comment-Based Help: docs-conceptual/lang-spec/chapter-14.md
+    - B. Grammar: docs-conceptual/lang-spec/chapter-15.md
+    - C. References: docs-conceptual/lang-spec/chapter-16.md
+  - Legacy PowerShell SDK:
+    - Overview: docs-conceptual/developer/windows-powershell.md
+    - Installing the Windows PowerShell SDK: docs-conceptual/developer/installing-the-windows-powershell-sdk.md
+    - Windows PowerShell Reference: docs-conceptual/developer/windows-powershell-reference.md
+    - What's New: docs-conceptual/developer/windows-powershell-reference-whats-new.md
+    - Writing a PowerShell Cmdlet:
+      - Cmdlet Overview: docs-conceptual/developer/cmdlet/cmdlet-overview.md
+      - PowerShell Cmdlet Concepts:
+        - docs-conceptual/developer/cmdlet/windows-powershell-cmdlet-concepts.md
+        - Cmdlet Development Guidelines:
+          - docs-conceptual/developer/cmdlet/cmdlet-development-guidelines.md
+          - Required Development Guidelines: docs-conceptual/developer/cmdlet/required-development-guidelines.md
+          - Strongly Encouraged Development Guidelines: docs-conceptual/developer/cmdlet/strongly-encouraged-development-guidelines.md
+          - Advisory Development Guidelines: docs-conceptual/developer/cmdlet/advisory-development-guidelines.md
+        - Cmdlet Class Declaration: docs-conceptual/developer/cmdlet/cmdlet-class-declaration.md
+        - Approved Verbs for PowerShell Commands: docs-conceptual/developer/cmdlet/approved-verbs-for-windows-powershell-commands.md
+        - Cmdlet Input Processing Methods: docs-conceptual/developer/cmdlet/cmdlet-input-processing-methods.md
+        - Cmdlet Parameters:
+          - docs-conceptual/developer/cmdlet/cmdlet-parameters.md
+          - Declaring Properties as Parameters: docs-conceptual/developer/cmdlet/declaring-properties-as-parameters.md
+          - Types of Cmdlet Parameters: docs-conceptual/developer/cmdlet/types-of-cmdlet-parameters.md
+          - Standard Cmdlet Parameter Names and Types:
+            - docs-conceptual/developer/cmdlet/standard-cmdlet-parameter-names-and-types.md
+            - Activity Parameters: docs-conceptual/developer/cmdlet/activity-parameters.md
+            - Date and Time Parameters: docs-conceptual/developer/cmdlet/date-and-time-parameters.md
+            - Format Parameters: docs-conceptual/developer/cmdlet/format-parameters.md
+            - Property Parameters: docs-conceptual/developer/cmdlet/property-parameters.md
+            - Quantity Parameters: docs-conceptual/developer/cmdlet/quantity-parameters.md
+            - Resource Parameters: docs-conceptual/developer/cmdlet/resource-parameters.md
+            - Security Parameters: docs-conceptual/developer/cmdlet/security-parameters.md
+          - Parameter Aliases: docs-conceptual/developer/cmdlet/parameter-aliases.md
+          - Common Parameter Names: docs-conceptual/developer/cmdlet/common-parameter-names.md
+          - Cmdlet Parameter Sets: docs-conceptual/developer/cmdlet/cmdlet-parameter-sets.md
+          - Cmdlet Dynamic Parameters: docs-conceptual/developer/cmdlet/cmdlet-dynamic-parameters.md
+          - Supporting Wildcard Characters in Cmdlet Parameters: docs-conceptual/developer/cmdlet/supporting-wildcard-characters-in-cmdlet-parameters.md
+          - Validating Parameter Input: docs-conceptual/developer/cmdlet/validating-parameter-input.md
+          - Input Filter Parameters: docs-conceptual/developer/cmdlet/input-filter-parameters.md
+        - Cmdlet Attributes:
+          - docs-conceptual/developer/cmdlet/cmdlet-attributes.md
+          - Attributes in Cmdlet Code: docs-conceptual/developer/cmdlet/attributes-in-cmdlet-code.md
+          - Attribute Types: docs-conceptual/developer/cmdlet/attribute-types.md
+          - Alias Attribute Declaration: docs-conceptual/developer/cmdlet/alias-attribute-declaration.md
+          - Cmdlet Attribute Declaration: docs-conceptual/developer/cmdlet/cmdlet-attribute-declaration.md
+          - Credential Attribute Declaration: docs-conceptual/developer/cmdlet/credential-attribute-declaration.md
+          - OutputType Attribute Declaration: docs-conceptual/developer/cmdlet/outputtype-attribute-declaration.md
+          - Parameter Attribute Declaration: docs-conceptual/developer/cmdlet/parameter-attribute-declaration.md
+          - ValidateCount Attribute Declaration: docs-conceptual/developer/cmdlet/validatecount-attribute-declaration.md
+          - ValidateLength Attribute Declaration: docs-conceptual/developer/cmdlet/validatelength-attribute-declaration.md
+          - ValidatePattern Attribute Declaration: docs-conceptual/developer/cmdlet/validatepattern-attribute-declaration.md
+          - ValidateRange Attribute Declaration: docs-conceptual/developer/cmdlet/validaterange-attribute-declaration.md
+          - ValidateScript Attribute Declaration: docs-conceptual/developer/cmdlet/validatescript-attribute-declaration.md
+          - ValidateSet Attribute Declaration: docs-conceptual/developer/cmdlet/validateset-attribute-declaration.md
+        - Cmdlet Aliases: docs-conceptual/developer/cmdlet/cmdlet-aliases.md
+        - Cmdlet Output:
+          - docs-conceptual/developer/cmdlet/cmdlet-output.md
+          - Types of Cmdlet Output: docs-conceptual/developer/cmdlet/types-of-cmdlet-output.md
+          - Cmdlet Error Reporting: docs-conceptual/developer/cmdlet/cmdlet-error-reporting.md
+          - Extending Output Objects:
+            - docs-conceptual/developer/cmdlet/extending-output-objects.md
+            - Extending Properties for Objects: docs-conceptual/developer/cmdlet/extending-properties-for-objects.md
+            - Defining Default Methods for Objects: docs-conceptual/developer/cmdlet/defining-default-methods-for-objects.md
+            - Defining Default Member Sets for Objects: docs-conceptual/developer/cmdlet/defining-default-member-sets-for-objects.md
+          - Custom Formatting Files: docs-conceptual/developer/cmdlet/custom-formatting-files.md
+        - Requesting Confirmation:
+          - docs-conceptual/developer/cmdlet/requesting-confirmation.md
+          - Requesting Confirmation from Cmdlets: docs-conceptual/developer/cmdlet/requesting-confirmation-from-cmdlets.md
+          - Users Requesting Confirmation: docs-conceptual/developer/cmdlet/users-requesting-confirmation.md
+          - Confirmation Messages: docs-conceptual/developer/cmdlet/confirmation-messages.md
+        - PowerShell Error Reporting:
+          - docs-conceptual/developer/cmdlet/windows-powershell-error-reporting.md
+          - Error Reporting Concepts: docs-conceptual/developer/cmdlet/error-reporting-concepts.md
+          - Terminating Errors: docs-conceptual/developer/cmdlet/terminating-errors.md
+          - Non-Terminating Errors: docs-conceptual/developer/cmdlet/non-terminating-errors.md
+          - Displaying Error Information: docs-conceptual/developer/cmdlet/displaying-error-information.md
+          - PowerShell Error Records: docs-conceptual/developer/cmdlet/windows-powershell-error-records.md
+          - Interpreting ErrorRecord Objects: docs-conceptual/developer/cmdlet/interpreting-errorrecord-objects.md
+        - Background Jobs: docs-conceptual/developer/cmdlet/background-jobs.md
+        - Invoking Cmdlets and Scripts Within a Cmdlet: docs-conceptual/developer/cmdlet/invoking-cmdlets-and-scripts-within-a-cmdlet.md
+        - Cmdlet Sets: docs-conceptual/developer/cmdlet/cmdlet-sets.md
+        - PowerShell Session State: docs-conceptual/developer/cmdlet/windows-powershell-session-state.md
+      - Examples of Cmdlet Code:
+        - docs-conceptual/developer/cmdlet/examples-of-cmdlet-code.md
+        - How to Write a Simple Cmdlet: docs-conceptual/developer/cmdlet/how-to-write-a-simple-cmdlet.md
+        - How to Declare Cmdlet Parameters: docs-conceptual/developer/cmdlet/how-to-declare-cmdlet-parameters.md
+        - How to Declare Parameter Sets: docs-conceptual/developer/cmdlet/how-to-declare-parameter-sets.md
+        - How to Validate Parameter Input:
+          - docs-conceptual/developer/cmdlet/how-to-validate-parameter-input.md
+          - How to Validate an Argument using a script: docs-conceptual/developer/cmdlet/how-to-validate-an-argument-using-script.md
+          - How to Validate an Argument Set: docs-conceptual/developer/cmdlet/how-to-validate-an-argument-set.md
+          - How to Validate an Argument Range: docs-conceptual/developer/cmdlet/how-to-validate-an-argument-range.md
+          - How to Validate an Argument Pattern: docs-conceptual/developer/cmdlet/how-to-validate-an-argument-pattern.md
+          - How to Validate the Argument Length: docs-conceptual/developer/cmdlet/how-to-validate-the-argument-length.md
+          - How to Validate an Argument Count: docs-conceptual/developer/cmdlet/how-to-validate-an-argument-count.md
+        - How to Declare Dynamic Parameters: docs-conceptual/developer/cmdlet/how-to-declare-dynamic-parameters.md
+        - How to Invoke Scripts Within a Cmdlet: docs-conceptual/developer/cmdlet/how-to-invoke-scripts-within-a-cmdlet.md
+        - How to Override Input Processing Methods: docs-conceptual/developer/cmdlet/how-to-override-input-processing-methods.md
+        - How to Support Transactions: docs-conceptual/developer/cmdlet/how-to-support-transactions.md
+        - How to Support Jobs: docs-conceptual/developer/cmdlet/how-to-support-jobs.md
+        - How to invoke a Cmdlet from within a Cmdlet: docs-conceptual/developer/cmdlet/how-to-invoke-a-cmdlet-from-within-a-cmdlet.md
+        - How to invoke a PSCmdlet from within a PSCmdlet: docs-conceptual/developer/cmdlet/how-to-invoke-a-pscmdlet-from-within-a-pscmdlet.md
+      - Tutorials for Writing Cmdlets:
+        - docs-conceptual/developer/cmdlet/tutorials-for-writing-cmdlets.md
+        - GetProc Tutorial:
+          - docs-conceptual/developer/cmdlet/getproc-tutorial.md
+          - Creating a Cmdlet without Parameters: docs-conceptual/developer/cmdlet/creating-a-cmdlet-without-parameters.md
+          - Adding Parameters That Process Command-Line Input: docs-conceptual/developer/cmdlet/adding-parameters-that-process-command-line-input.md
+          - Adding Parameters that Process Pipeline Input: docs-conceptual/developer/cmdlet/adding-parameters-that-process-pipeline-input.md
+          - Adding Non-Terminating Error Reporting to Your Cmdlet: docs-conceptual/developer/cmdlet/adding-non-terminating-error-reporting-to-your-cmdlet.md
+        - StopProc Tutorial:
+          - docs-conceptual/developer/cmdlet/stopproc-tutorial.md
+          - Creating a Cmdlet that Modifies the System: docs-conceptual/developer/cmdlet/creating-a-cmdlet-that-modifies-the-system.md
+          - Adding User Messages to Your Cmdlet: docs-conceptual/developer/cmdlet/adding-user-messages-to-your-cmdlet.md
+          - Adding Aliases, Wildcard Expansion, and Help to Cmdlet Parameters: docs-conceptual/developer/cmdlet/adding-aliases-wildcard-expansion-and-help-to-cmdlet-parameters.md
+          - Adding Parameter Sets to a Cmdlet: docs-conceptual/developer/cmdlet/adding-parameter-sets-to-a-cmdlet.md
+        - SelectStr Tutorial:
+          - docs-conceptual/developer/cmdlet/selectstr-tutorial.md
+          - Creating a Cmdlet to Access a Data Store: docs-conceptual/developer/cmdlet/creating-a-cmdlet-to-access-a-data-store.md
+      - Cmdlet Samples:
+        - docs-conceptual/developer/cmdlet/cmdlet-samples.md
+        - GetProcessSample01 Sample: docs-conceptual/developer/cmdlet/getprocesssample01-sample.md
+        - GetProcessSample02 Sample: docs-conceptual/developer/cmdlet/getprocesssample02-sample.md
+        - GetProcessSample03 Sample: docs-conceptual/developer/cmdlet/getprocesssample03-sample.md
+        - GetProcessSample04 Sample: docs-conceptual/developer/cmdlet/getprocesssample04-sample.md
+        - GetProcessSample05 Sample: docs-conceptual/developer/cmdlet/getprocesssample05-sample.md
+        - StopProcessSample01 Sample: docs-conceptual/developer/cmdlet/stopprocesssample01-sample.md
+        - StopProcessSample02 Sample: docs-conceptual/developer/cmdlet/stopprocesssample02-sample.md
+        - StopProcessSample03 Sample: docs-conceptual/developer/cmdlet/stopprocesssample03-sample.md
+        - StopProcessSample04 Sample: docs-conceptual/developer/cmdlet/stopprocesssample04-sample.md
+        - Events01 Sample: docs-conceptual/developer/cmdlet/events01-sample.md
+    - Writing a PowerShell Module:
+      - Overview: docs-conceptual/developer/module/writing-a-windows-powershell-module.md
+      - Understanding a PowerShell Module: docs-conceptual/developer/module/understanding-a-windows-powershell-module.md
+      - How to Write a PowerShell Script Module: docs-conceptual/developer/module/how-to-write-a-powershell-script-module.md
+      - How to Write a PowerShell Binary Module: docs-conceptual/developer/module/how-to-write-a-powershell-binary-module.md
+      - How to Write a PowerShell Module Manifest: docs-conceptual/developer/module/how-to-write-a-powershell-module-manifest.md
+      - Installing a PowerShell Module: docs-conceptual/developer/module/installing-a-powershell-module.md
+      - Registering Cmdlets:
+        - Overview: docs-conceptual/developer/module/registering-cmdlets.md
+        - Modules and Snap-ins: docs-conceptual/developer/module/modules-and-snap-ins.md
+        - How to Import Cmdlets Using Modules: docs-conceptual/developer/module/how-to-import-cmdlets-using-modules.md
+        - How to Create a Windows PowerShell Snap-in:
+          - Overview: docs-conceptual/developer/module/how-to-create-a-windows-powershell-snap-in.md
+          - Writing a PowerShell Snap-in: docs-conceptual/developer/module/writing-a-windows-powershell-snap-in.md
+          - Writing a Custom PowerShell Snap-in: docs-conceptual/developer/module/writing-a-custom-windows-powershell-snap-in.md
+      - Importing a PowerShell Module: docs-conceptual/developer/module/importing-a-powershell-module.md
+    - Writing a PowerShell Provider:
+      - PowerShell Provider Quickstart: docs-conceptual/developer/provider/windows-powershell-provider-quickstart.md
+      - PowerShell Provider Overview:
+        - docs-conceptual/developer/provider/windows-powershell-provider-overview.md
+        - Provider types: docs-conceptual/developer/provider/provider-types.md
+        - Provider cmdlets: docs-conceptual/developer/provider/provider-cmdlets.md
+        - Provider cmdlet parameters: docs-conceptual/developer/provider/provider-cmdlet-parameters.md
+        - Provider cmdlet dynamic parameters: docs-conceptual/developer/provider/provider-cmdlet-dynamic-parameters.md
+      - Writing an item provider: docs-conceptual/developer/provider/writing-an-item-provider.md
+      - Writing a container provider: docs-conceptual/developer/provider/writing-a-container-provider.md
+      - Writing a navigation provider: docs-conceptual/developer/provider/writing-a-navigation-provider.md
+      - Provider Samples:
+        - docs-conceptual/developer/provider/provider-samples.md
+        - AccessDBProviderSample01: docs-conceptual/developer/provider/accessdbprovidersample01.md
+        - AccessDBProviderSample02: docs-conceptual/developer/provider/accessdbprovidersample02.md
+        - AccessDBProviderSample03: docs-conceptual/developer/provider/accessdbprovidersample03.md
+        - AccessDBProviderSample04: docs-conceptual/developer/provider/accessdbprovidersample04.md
+        - AccessDBProviderSample05: docs-conceptual/developer/provider/accessdbprovidersample05.md
+        - AccessDBProviderSample06: docs-conceptual/developer/provider/accessdbprovidersample06.md
+    - Writing a PowerShell Host Application:
+      - PowerShell Host Quickstart: docs-conceptual/developer/hosting/windows-powershell-host-quickstart.md
+      - Creating Runspaces:
+        - docs-conceptual/developer/hosting/creating-runspaces.md
+        - Creating an InitialSessionState: docs-conceptual/developer/hosting/creating-an-initialsessionstate.md
+        - Creating a constrained runspace: docs-conceptual/developer/hosting/creating-a-constrained-runspace.md
+        - Creating multiple runspaces: docs-conceptual/developer/hosting/creating-multiple-runspaces.md
+      - Adding and invoking commands: docs-conceptual/developer/hosting/adding-and-invoking-commands.md
+      - Creating remote runspaces: docs-conceptual/developer/hosting/creating-remote-runspaces.md
+      - Creating a custom user interface: docs-conceptual/developer/hosting/creating-a-custom-user-interface.md
+      - Host Application Samples:
+        - docs-conceptual/developer/hosting/host-application-samples.md
+        - PowerShell API Samples:
+          - docs-conceptual/developer/hosting/windows-powershell-api-samples.md
+          - PowerShell01 Sample: docs-conceptual/developer/hosting/windows-powershell01-sample.md
+          - PowerShell02 Sample: docs-conceptual/developer/hosting/windows-powershell02-sample.md
+        - Custom Host Samples:
+          - docs-conceptual/developer/hosting/custom-host-samples.md
+          - Host01 Sample: docs-conceptual/developer/hosting/host01-sample.md
+          - Host02 Sample: docs-conceptual/developer/hosting/host02-sample.md
+          - Host03 Sample: docs-conceptual/developer/hosting/host03-sample.md
+          - Host04 Sample: docs-conceptual/developer/hosting/host04-sample.md
+          - Host05 Sample: docs-conceptual/developer/hosting/host05-sample.md
+          - Host06 Sample: docs-conceptual/developer/hosting/host06-sample.md
+        - Runspace Samples:
+          - docs-conceptual/developer/hosting/runspace-samples.md
+          - Runspace01 Sample: docs-conceptual/developer/hosting/runspace01-sample.md
+          - Runspace02 Sample: docs-conceptual/developer/hosting/runspace02-sample.md
+          - Runspace03 Sample: docs-conceptual/developer/hosting/runspace03-sample.md
+          - Runspace04 Sample: docs-conceptual/developer/hosting/runspace04-sample.md
+          - Runspace05 Sample: docs-conceptual/developer/hosting/runspace05-sample.md
+          - Runspace06 Sample: docs-conceptual/developer/hosting/runspace06-sample.md
+          - Runspace07 Sample: docs-conceptual/developer/hosting/runspace07-sample.md
+          - Runspace08 Sample: docs-conceptual/developer/hosting/runspace08-sample.md
+          - Runspace09 Sample: docs-conceptual/developer/hosting/runspace09-sample.md
+          - Runspace10 Sample: docs-conceptual/developer/hosting/runspace10-sample.md
+          - Runspace11 Sample: docs-conceptual/developer/hosting/runspace11-sample.md
+        - Remote Runspace Samples:
+          - docs-conceptual/developer/hosting/remote-runspace-samples.md
+          - RemoteRunspace01 Sample: docs-conceptual/developer/hosting/remoterunspace01-sample.md
+          - RemoteRunspacePool01 Sample: docs-conceptual/developer/hosting/remoterunspacepool01-sample.md
+    - Writing a PowerShell Formatting File:
+      - Formatting File Overview: docs-conceptual/developer/format/formatting-file-overview.md
+      - Formatting File Concepts:
+        - Overview: docs-conceptual/developer/format/formatting-file-concepts.md
+        - Creating a Table View: docs-conceptual/developer/format/creating-a-table-view.md
+        - Creating a List View: docs-conceptual/developer/format/creating-a-list-view.md
+        - Creating a Wide View: docs-conceptual/developer/format/creating-a-wide-view.md
+        - Creating Custom Controls: docs-conceptual/developer/format/creating-custom-controls.md
+        - Loading and Exporting Formatting Data: docs-conceptual/developer/format/loading-and-exporting-formatting-data.md
+        - Defining Selection Sets: docs-conceptual/developer/format/defining-selection-sets.md
+        - Defining Conditions for Displaying Data: docs-conceptual/developer/format/defining-conditions-for-displaying-data.md
+        - Formatting Displayed Data: docs-conceptual/developer/format/formatting-displayed-data.md
+      - PowerShell Formatting Files:
+        - Overview: docs-conceptual/developer/format/powershell-formatting-files.md
+        - How to Create a Formatting File (.format.ps1xml): docs-conceptual/developer/format/how-to-create-a-formatting-file-format-ps1xml.md
+      - Examples of Formatting Files:
+        - Wide View (Basic): docs-conceptual/developer/format/wide-view-basic.md
+        - Wide View (GroupBy): docs-conceptual/developer/format/wide-view-groupby.md
+        - List View (Basic): docs-conceptual/developer/format/list-view-basic.md
+        - List View (Labels): docs-conceptual/developer/format/list-view-labels.md
+        - List View (GroupBy): docs-conceptual/developer/format/list-view-groupby.md
+      - Format Schema XML Reference:
+        - docs-conceptual/developer/format/format-schema-xml-reference.md
+        - Configuration Element: docs-conceptual/developer/format/configuration-element-format.md
+        - Controls Element for Configuration:
+          - docs-conceptual/developer/format/controls-element-for-configuration-format.md
+          - Control Element for Controls for Configuration: docs-conceptual/developer/format/control-element-for-controls-for-configuration-format.md
+          - CustomControl Element for Control for Controls for Configuration:
+            - docs-conceptual/developer/format/customcontrol-element-for-control-for-controls-for-configuration-format.md
+            - CustomEntries Element for CustomControl for Controls for Configuration: docs-conceptual/developer/format/customentries-element-for-customcontrol-for-controls-for-configuration-format.md
+            - CustomEntry Element for CustomControl for Controls for Configuration:
+              - docs-conceptual/developer/format/customentry-element-for-customcontrol-for-controls-for-configuration-format.md
+              - CustomItem Element for CustomEntry for Controls for Configuration:
+                - docs-conceptual/developer/format/customitem-element-for-customentry-for-controls-for-configuration-format.md
+                - ExpressionBinding Element for CustomItem for Controls for Configuration:
+                  - docs-conceptual/developer/format/expressionbinding-element-for-customitem-for-controls-for-configuration-format.md
+                  - CustomControlName Element for ExpressionBinding for Controls for Configuration: docs-conceptual/developer/format/customcontrolname-element-for-expressionbinding-for-controls-for-configuration-format.md
+                  - EnumerateCollection Element for ExpressionBinding for Controls for Configuration: docs-conceptual/developer/format/enumeratecollection-element-for-expressionbinding-for-controls-for-configuration-format.md
+                  - ItemSelectionCondition Element for ExpressionBinding for Controls for Configuration:
+                    - docs-conceptual/developer/format/itemselectioncondition-element-for-expressionbinding-for-controls-for-configuration-format.md
+                    - PropertyName Element for ItemSelectionCondition for Controls for Configuration: docs-conceptual/developer/format/propertyname-element-for-itemselectioncondition-for-controls-for-configuration-format.md
+                    - ScriptBlock Element for ItemSelectionCondition for Controls for Configuration: docs-conceptual/developer/format/scriptblock-element-for-itemselectioncondition-for-controls-for-configuration-format.md
+                  - PropertyName Element for ExpressionBinding for Controls for Configuration: docs-conceptual/developer/format/propertyname-element-for-expressionbinding-for-controls-for-configuration-format.md
+                  - ScriptBlock Element for ExpressionBinding for Controls for Configuration: docs-conceptual/developer/format/scriptblock-element-for-expressionbinding-for-controls-for-configuration-format.md
+                - Frame Element for CustomItem for Controls for Configuration:
+                  - docs-conceptual/developer/format/frame-element-for-customitem-for-controls-for-configuration-format.md
+                  - FirstLineHanging Element for Frame for Controls for Configuration: docs-conceptual/developer/format/firstlinehanging-element-for-frame-for-controls-for-configuration-format.md
+                  - FirstLineIndent Element for Frame for Controls for Configuration: docs-conceptual/developer/format/firstlineindent-element-for-frame-for-controls-for-configuration-format.md
+                  - LeftIndent Element for Frame for Controls for Configuration: docs-conceptual/developer/format/leftindent-element-for-frame-for-controls-for-configuration-format.md
+                  - RightIndent Element for Frame for Controls for Configuration: docs-conceptual/developer/format/rightindent-element-for-frame-for-controls-for-configuration-format.md
+                - NewLine Element for CustomItem for Controls for Configuration: docs-conceptual/developer/format/newline-element-for-customitem-for-controls-for-configuration-format.md
+                - Text Element for CustomItem for Controls for Configuration: docs-conceptual/developer/format/text-element-for-customitem-for-controls-for-configuration-format.md
+              - EntrySelectedBy Element for CustomEntry for Controls for Configuration:
+                - docs-conceptual/developer/format/entryselectedby-element-for-customentry-for-controls-for-configuration-format.md
+                - SelectionCondition Element for EntrySelectedBy for Controls for Configuration:
+                  - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-controls-for-configuration-format.md
+                  - PropertyName Element for SelectionCondition for Controls for Configuration: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-controls-for-configuration-format.md
+                  - ScriptBlock Element for SelectionCondition for Controls for Configuration: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-controls-for-configuration-format.md
+                  - SelectionSetName Element for SelectionCondition for Controls for Configuration: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-controls-for-configuration-format.md
+                  - TypeName Element for SelectionCondition for Controls for Configuration: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-controls-for-configuration-format.md
+                - SelectionSetName Element for EntrySelectedBy for Controls for Configuration: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-controls-for-configuration-format.md
+                - TypeName Element for EntrySelectedBy for Controls for Configuration: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-controls-for-configuration-format.md
+          - Name Element for Control for Controls for Configuration: docs-conceptual/developer/format/name-element-for-control-for-controls-for-configuration-format.md
+        - DefaultSettings Element:
+          - docs-conceptual/developer/format/defaultsettings-element-format.md
+          - DisplayError Element: docs-conceptual/developer/format/displayerror-element-format.md
+          - EnumerableExpansions Element:
+            - docs-conceptual/developer/format/enumerableexpansions-element-format.md
+            - EnumerableExpansion Element: docs-conceptual/developer/format/enumerableexpansion-element-format.md
+            - EntrySelectedBy Element for EnumerableExpansion:
+              - docs-conceptual/developer/format/entryselectedby-element-for-enumerableexpansion-format.md
+              - SelectionCondition Element for EntrySelectedBy for EnumerableExpansion:
+                - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-enumerableexpansion-format.md
+                - PropertyName Element for SelectionCondition for Controls for View: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-controls-for-view-format.md
+                - ScriptBlock Element for SelectionCondition for Controls for View: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-controls-for-view-format.md
+                - SelectionSetName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md
+                - TypeName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md
+              - SelectionSetName Element for EntrySelectedBy for EnumerableExpansion: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-enumerableexpansion-format.md
+              - TypeName Element for EntrySelectedBy for EnumerableExpansion: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-enumerableexpansion-format.md
+            - Expand Element for EnumerableExpansion: docs-conceptual/developer/format/expand-element-format.md
+          - PropertyCountForTable Element: docs-conceptual/developer/format/propertycountfortable-element-format.md
+          - ShowError Element: docs-conceptual/developer/format/showerror-element-format.md
+          - WrapTables Element: docs-conceptual/developer/format/wraptables-element-format.md
+        - SelectionSets Element:
+          - docs-conceptual/developer/format/selectionsets-element-format.md
+          - SelectionSet Element: docs-conceptual/developer/format/selectionset-element-format.md
+          - Name Element for SelectionSet: docs-conceptual/developer/format/name-element-for-selectionset-format.md
+          - Types Element for SelectionSet:
+            - docs-conceptual/developer/format/types-element-for-selectionset-format.md
+            - TypeName Element for Types: docs-conceptual/developer/format/typename-element-for-types-format.md
+        - ViewDefinitions Element:
+          - docs-conceptual/developer/format/viewdefinitions-element-format.md
+          - View Element: docs-conceptual/developer/format/view-element-format.md
+          - Controls Element for View:
+            - docs-conceptual/developer/format/controls-element-for-view-format.md
+            - Control Element for Controls for View: docs-conceptual/developer/format/control-element-for-controls-for-view-format.md
+            - CustomControl Element for Control for Controls for View:
+              - docs-conceptual/developer/format/customcontrol-element-for-control-for-controls-for-view-format.md
+              - CustomEntries Element for CustomControl for Controls for View: docs-conceptual/developer/format/customentries-element-for-customcontrol-for-controls-for-view-format.md
+              - CustomEntry Element for CustomEntries for Controls for View:
+                - docs-conceptual/developer/format/customentry-element-for-customentries-for-controls-for-view-format.md
+                - CustomItem Element for CustomEntry for Controls for View:
+                  - docs-conceptual/developer/format/customitem-element-for-customentry-for-controls-for-view-format.md
+                  - ExpressionBinding Element for CustomItem for Controls for View:
+                    - docs-conceptual/developer/format/expressionbinding-element-for-customitem-for-controls-for-view-format.md
+                    - CustomControlName Element for ExpressionBinding for Controls for View: docs-conceptual/developer/format/customcontrolname-element-for-expressionbinding-for-controls-for-view-format.md
+                    - EnumerateCollection Element for ExpressionBinding for Controls for View: docs-conceptual/developer/format/enumeratecollection-element-for-expressionbinding-for-controls-for-view-format.md
+                    - ItemSelectionCondition Element for ExpressionBinding for Controls for View:
+                      - docs-conceptual/developer/format/itemselectioncondition-element-for-expressionbinding-for-controls-for-view-format.md
+                      - PropertyName Element for ItemSelectionCondition for Controls for View: docs-conceptual/developer/format/propertyname-element-for-itemselectioncondition-for-controls-for-view-format.md
+                      - ScriptBlock Element for ItemSelectionCondition for Controls for View: docs-conceptual/developer/format/scriptblock-element-for-itemselectioncondition-for-controls-for-view-format.md
+                    - PropertyName Element for ExpressionBinding for Controls for View: docs-conceptual/developer/format/propertyname-element-for-expressionbinding-for-controls-for-view-format.md
+                    - ScriptBlock Element for ExpressionBinding for Controls for View: docs-conceptual/developer/format/scriptblock-element-for-expressionbinding-for-controls-for-view-format.md
+                  - Frame Element for CustomItem for Controls for View:
+                    - docs-conceptual/developer/format/frame-element-for-customitem-for-controls-for-view-format.md
+                    - FirstLineHanging Element for Frame for Controls for View: docs-conceptual/developer/format/firstlinehanging-element-for-frame-for-controls-for-view-format.md
+                    - FirstLineIndent Element for Frame for Controls for View: docs-conceptual/developer/format/firstlineindent-element-for-frame-for-controls-for-view-format.md
+                    - LeftIndent Element for Frame for Controls for View: docs-conceptual/developer/format/leftindent-element-for-frame-for-controls-for-view-format.md
+                    - RightIndent Element for Frame for Controls for View: docs-conceptual/developer/format/rightindent-element-for-frame-for-controls-for-view-format.md
+                  - NewLine Element for CustomItem for Controls for View: docs-conceptual/developer/format/newline-element-for-customitem-for-controls-for-view-format.md
+                  - Text Element for CustomItem for Controls for View: docs-conceptual/developer/format/text-element-for-customitem-for-controls-for-view-format.md
+                - EntrySelectedBy Element for CustomEntry for Controls for View:
+                  - docs-conceptual/developer/format/entryselectedby-element-for-customentry-for-controls-for-view-format.md
+                  - SelectionCondition Element for EntrySelectedBy for Controls for View:
+                    - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-controls-for-view-format.md
+                    - PropertyName Element for SelectionCondition for CustomControl for View: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-customcontrol-for-view-format.md
+                    - ScriptBlock Element for SelectionCondition for CustomControl for View: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-customcontrol-for-view-format.md
+                    - SelectionSetName Element for SelectionCondition for Controls for View: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-controls-for-view-format.md
+                    - TypeName Element for SelectionCondition for Controls for View: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-controls-for-view-format.md
+                  - SelectionSetName Element for EntrySelectedBy for Controls for View: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-controls-for-view-format.md
+                  - TypeName Element for EntrySelectedBy for Controls for View: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-controls-for-view-format.md
+            - Name Element for Control for Controls for View: docs-conceptual/developer/format/name-element-for-control-for-controls-for-view-format.md
+          - CustomControl Element for View:
+            - docs-conceptual/developer/format/customcontrol-element-for-view-format.md
+            - CustomEntries Element for CustomControl for View: docs-conceptual/developer/format/customentries-element-for-customcontrol-for-view-format.md
+            - CustomEntry Element for CustomEntries for CustomControl for View:
+              - docs-conceptual/developer/format/customentry-element-for-customentries-for-customcontrol-for-view-format.md
+              - CustomItem Element for CustomEntry for CustomControl for View:
+                - docs-conceptual/developer/format/customitem-element-for-customentry-for-customcontrol-for-view-format.md
+                - ExpressionBinding Element for CustomItem for CustomControl for View:
+                  - docs-conceptual/developer/format/expressionbinding-element-for-customitem-for-customcontrol-for-view-format.md
+                  - CustomControlName Element for ExpressionBinding for CustomControl for View: docs-conceptual/developer/format/customcontrolname-element-for-expressionbinding-for-customcontrol-for-view-format.md
+                  - EnumerateCollection Element for ExpressionBinding for CustomControl for View: docs-conceptual/developer/format/enumeratecollection-element-for-expressionbinding-for-customcontrol-for-view-format.md
+                  - ItemSelectionCondition Element for ExpressionBinding for CustomControl:
+                    - docs-conceptual/developer/format/itemselectioncondition-element-for-expressionbinding-for-customcontrol-format.md
+                    - PropertyName Element for ItemSelectionCondition for CustomControl for View: docs-conceptual/developer/format/propertyname-element-for-itemselectioncondition-for-customcontrol-for-view-format.md
+                    - ScriptBlock Element for ItemSelectionCondition for CustomControl for View: docs-conceptual/developer/format/scriptblock-element-for-itemselectioncondition-for-customcontrol-for-view-format.md
+                  - PropertyName Element for ExpressionBinding for CustomControl for View: docs-conceptual/developer/format/propertyname-element-for-expressionbinding-for-customcontrol-for-view-format.md
+                  - ScriptBlock Element for ExpressionBinding for CustomControl for View: docs-conceptual/developer/format/scriptblock-element-for-expressionbinding-for-customcontrol-for-view-format.md
+                - Frame Element for CustomItem for CustomControl for View:
+                  - docs-conceptual/developer/format/frame-element-for-customitem-for-customcontrol-for-view-format.md
+                  - FirstLineHanging Element for Frame for CustomControl for View: docs-conceptual/developer/format/firstlinehanging-element-for-frame-for-customcontrol-for-view-format.md
+                  - FirstLineIndent Element for Frame for CustomControl for View: docs-conceptual/developer/format/firstlineindent-element-for-frame-for-customcontrol-for-view-format.md
+                  - LeftIndent Element for Frame for CustomControl for View: docs-conceptual/developer/format/leftindent-element-for-frame-for-customcontrol-for-view-format.md
+                  - RightIndent Element for Frame for CustomControl for View: docs-conceptual/developer/format/rightindent-element-for-frame-for-customcontrol-for-view-format.md
+                - NewLine Element for CustomItem for CustomControl for View: docs-conceptual/developer/format/newline-element-for-customitem-for-customcontrol-for-view-format.md
+                - Text Element for CustomItem for CustomView for View: docs-conceptual/developer/format/text-element-for-customitem-for-customview-for-view-format.md
+              - EntrySelectedBy Element for CustomEntry for CustomControl for View:
+                - docs-conceptual/developer/format/entryselectedby-element-for-customentry-for-customcontrol-for-view-format.md
+                - SelectionCondition Element for EntrySelectedBy for CustomControl:
+                  - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-customcontrol-format.md
+                  - PropertyName Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md
+                  - ScriptBlock Element for SelectionCondition for EntrySelectedBy for EnumerableExpansion: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-enumerableexpansion-format.md
+                  - SelectionSetName Element for SelectionCondition for CustomControl for View: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-customcontrol-for-view-format.md
+                  - TypeName Element for SelectionCondition for CustomControl for View: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-customcontrol-for-view-format.md
+                - SelectionSetName Element for EntrySelectedBy for CustomControl for View: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-customcontrol-for-view-format.md
+                - TypeName Element for EntrySelectedBy for CustomEntry for View: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-customentry-for-view-format.md
+          - GroupBy Element for View:
+            - docs-conceptual/developer/format/groupby-element-for-view-format.md
+            - CustomControl Element for GroupBy:
+              - docs-conceptual/developer/format/customcontrol-element-for-groupby-format.md
+              - CustomEntries Element for CustomControl for GroupBy: docs-conceptual/developer/format/customentries-element-for-customcontrol-for-groupby-format.md
+              - CustomEntry Element for CustomControl for GroupBy:
+                - docs-conceptual/developer/format/customentry-element-for-customcontrol-for-groupby-format.md
+                - CustomItem Element for CustomEntry for GroupBy:
+                  - docs-conceptual/developer/format/customitem-element-for-customentry-for-groupby-format.md
+                  - ExpressionBinding Element for CustomItem for GroupBy:
+                    - docs-conceptual/developer/format/expressionbinding-element-for-customitem-for-groupby-format.md
+                    - CustomControlName Element for ExpressionBinding for GroupBy: docs-conceptual/developer/format/customcontrolname-element-for-expressionbinding-for-groupby-format.md
+                    - EnumerateCollection Element for ExpressionBinding for GroupBy: docs-conceptual/developer/format/enumeratecollection-element-for-expressionbinding-for-groupby-format.md
+                    - ItemSelectionCondition Element for ExpressionBinding for GroupBy:
+                      - docs-conceptual/developer/format/itemselectioncondition-element-for-expressionbinding-for-groupby-format.md
+                      - PropertyName Element for ItemSelectionCondition for GroupBy: docs-conceptual/developer/format/propertyname-element-for-itemselectioncondition-for-groupby-format.md
+                      - ScriptBlock Element for ItemSelectionCondition for GroupBy: docs-conceptual/developer/format/scriptblock-element-for-itemselectioncondition-for-groupby-format.md
+                    - PropertyName Element for ExpressionBinding for GroupBy: docs-conceptual/developer/format/propertyname-element-for-expressionbinding-for-groupby-format.md
+                    - ScriptBlock Element for ExpressionBinding for GroupBy: docs-conceptual/developer/format/scriptblock-element-for-expressionbinding-for-groupby-format.md
+                  - Frame Element for CustomItem for GroupBy:
+                    - docs-conceptual/developer/format/frame-element-for-customitem-for-groupby-format.md
+                    - FirstLineHanging Element for Frame for GroupBy: docs-conceptual/developer/format/firstlinehanging-element-for-frame-for-groupby-format.md
+                    - FirstLineIndent Element for Frame for GroupBy: docs-conceptual/developer/format/firstlineindent-element-for-frame-for-groupby-format.md
+                    - LeftIndent Element for Frame for GroupBy: docs-conceptual/developer/format/leftindent-element-for-frame-for-groupby-format.md
+                    - RightIndent Element for Frame for GroupBy: docs-conceptual/developer/format/rightindent-element-for-frame-for-groupby-format.md
+                  - NewLine Element for CustomItem for GroupBy: docs-conceptual/developer/format/newline-element-for-customitem-for-groupby-format.md
+                  - Text Element for CustomItem for GroupBy: docs-conceptual/developer/format/text-element-for-customitem-for-groupby-format.md
+                - EntrySelectedBy Element for CustomEntry for GroupBy:
+                  - docs-conceptual/developer/format/entryselectedby-element-for-customentry-for-groupby-format.md
+                  - SelectionCondition Element for EntrySelectedBy for GroupBy:
+                    - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-groupby-format.md
+                    - PropertyName Element for SelectionCondition for GroupBy: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-groupby-format.md
+                    - ScriptBlock Element for SelectionCondition for EntrySelectedBy for GroupBy: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-groupby-format.md
+                    - SelectionSetName Element for SelectionCondition for GroupBy: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-groupby-format.md
+                    - TypeName Element for SelectionCondition for GroupBy: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-groupby-format.md
+                  - SelectionSetName Element for EntrySelectedBy for GroupBy: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-groupby-format.md
+                  - TypeName Element for EntrySelectedBy for GroupBy: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-groupby-format.md
+            - CustomControlName Element for GroupBy: docs-conceptual/developer/format/customcontrolname-element-for-groupby-format.md
+            - Label Element for GroupBy: docs-conceptual/developer/format/label-element-for-groupby-format.md
+            - PropertyName Element for GroupBy: docs-conceptual/developer/format/propertyname-element-for-groupby-format.md
+            - ScriptBlock Element for GroupBy: docs-conceptual/developer/format/scriptblock-element-for-groupby-format.md
+          - ListControl Element:
+            - docs-conceptual/developer/format/listcontrol-element-format.md
+            - ListEntries Element for ListControl: docs-conceptual/developer/format/listentries-element-for-listcontrol-format.md
+            - ListEntry Element for ListControl:
+              - docs-conceptual/developer/format/listentry-element-for-listcontrol-format.md
+              - EntrySelectedBy Element for ListEntry for ListControl:
+                - docs-conceptual/developer/format/entryselectedby-element-for-listentry-for-listcontrol-format.md
+                - SelectionCondition Element for EntrySelectedBy for ListControl:
+                  - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-listcontrol-format.md
+                  - PropertyName Element for SelectionCondition for EntrySelectedBy for ListControl: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md
+                  - ScriptBlock Element for SelectionCondition for EntrySelectedBy for ListControl: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md
+                  - SelectionSetName Element for SelectionCondition for EntrySelectedBy for ListEntry: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-listentry-format.md
+                  - TypeName Element for SelectionCondition for EntrySelectedBy for ListControl: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-entryselectedby-for-listcontrol-format.md
+                - SelectionSetName Element for EntrySelectedBy for ListControl: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-listcontrol-format.md
+                - TypeName Element for EntrySelectedBy for ListControl: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-listcontrol-format.md
+              - ListItems Element for ListEntry for ListControl:
+                - docs-conceptual/developer/format/listitems-element-for-listentry-for-listcontrol-format.md
+                - FormatString Element for ListItem for ListControl: docs-conceptual/developer/format/formatstring-element-for-listitem-for-listcontrol-format.md
+                - ItemSelectionCondition Element for ListItem for ListControl:
+                  - docs-conceptual/developer/format/itemselectioncondition-element-for-listitem-for-listcontrol-format.md
+                  - PropertyName Element for ItemSelectionCondition for ListControl: docs-conceptual/developer/format/propertyname-element-for-itemselectioncondition-for-listcontrol-format.md
+                  - ScriptBlock Element for ItemSelectionCondition for ListControl: docs-conceptual/developer/format/scriptblock-element-for-itemselectioncondition-for-listcontrol-format.md
+                - Label Element for ListItem for ListControl: docs-conceptual/developer/format/label-element-for-listitem-for-listcontrol-format.md
+                - ListItem Element for ListItems for ListControl:
+                  - docs-conceptual/developer/format/listitem-element-for-listitems-for-listcontrol-format.md
+                  - PropertyName Element for ListItem for ListControl: docs-conceptual/developer/format/propertyname-element-for-listitem-for-listcontrol-format.md
+                  - ScriptBlock Element for ListItem for ListControl: docs-conceptual/developer/format/scriptblock-element-for-listitem-for-listcontrol-format.md
+          - Name Element for View: docs-conceptual/developer/format/name-element-for-view-format.md
+          - OutOfBand Element for View: docs-conceptual/developer/format/outofband-element-for-view-format.md
+          - TableControl Element:
+            - docs-conceptual/developer/format/tablecontrol-element-format.md
+            - AutoSize Element for TableControl: docs-conceptual/developer/format/autosize-element-for-tablecontrol-format.md
+            - HideTableHeaders Element: docs-conceptual/developer/format/hidetableheaders-element-format.md
+            - TableHeaders Element:
+              - docs-conceptual/developer/format/tableheaders-element-format.md
+              - TableColumnHeader Element: docs-conceptual/developer/format/tablecolumnheader-element-format.md
+              - Alignment Element for TableColumnHeader for TableControl: docs-conceptual/developer/format/alignment-element-for-tablecolumnheader-for-tablecontrol-format.md
+              - Label Element for TableColumnHeader for TableControl: docs-conceptual/developer/format/label-element-for-tablecolumnheader-for-tablecontrol-format.md
+              - Width Element for TableColumnHeader for TableControl: docs-conceptual/developer/format/width-element-for-tablecolumnheader-for-tablecontrol-format.md
+            - TableRowEntries Element for TableControl:
+              - docs-conceptual/developer/format/tablerowentries-element-for-tablecontrol-format.md
+              - TableColumnItems Element for TableRowEntry for TableControl:
+                - docs-conceptual/developer/format/tablecolumnitems-element-for-tablerowentry-for-tablecontrol-format.md
+                - TableColumnItem Element for TableColumnItems for TableControl: docs-conceptual/developer/format/tablecolumnitem-element-for-tablecolumnitems-for-tablecontrol-format.md
+                - Alignment Element for TableColumnItem for TableControl: docs-conceptual/developer/format/alignment-element-for-tablecolumnitem-for-tablecontrol-format.md
+                - FormatString Element for TableColumnItem for TableControl: docs-conceptual/developer/format/formatstring-element-for-tablecolumnitem-for-tablecontrol-format.md
+                - PropertyName Element for TableColumnItem for TableControl: docs-conceptual/developer/format/propertyname-element-for-tablecolumnitem-for-tablecontrol-format.md
+                - ScriptBlock Element for TableColumnItem for TableControl: docs-conceptual/developer/format/scriptblock-element-for-tablecolumnitem-for-tablecontrol-format.md
+              - TableRowEntry Element for TableRowEntries for TableControl:
+                - docs-conceptual/developer/format/tablerowentry-element-for-tablerowentries-for-tablecontrol-format.md
+                - EntrySelectedBy Element for TableRowEntry for TableControl: docs-conceptual/developer/format/entryselectedby-element-for-tablerowentry-for-tablecontrol-format.md
+                - SelectionCondition Element for EntrySelectedBy for TableControl:
+                  - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-tablecontrol-format.md
+                  - PropertyName Element for SelectionCondition for EntrySelectedBy for TableRowEntry: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-tablerowentry-format.md
+                  - ScriptBlock Element for SelectionCondition for EntrySelectedBy for TableControl: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md
+                  - SelectionSetName Element for SelectionCondition for EntrySelectedBy for TableControl: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md
+                  - TypeName Element for SelectionCondition for EntrySelectedBy for TableControl: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-entryselectedby-for-tablecontrol-format.md
+                - SelectionSetName Element for EntrySelectedBy for TableControl: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-tablecontrol-format.md
+                - TypeName Element for EntrySelectedBy for TableControl: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-tablecontrol-format.md
+              - Wrap Element for TableRowEntry for TableControl: docs-conceptual/developer/format/wrap-element-for-tablerowentry-for-tablecontrol-format.md
+          - ViewSelectedBy Element:
+            - docs-conceptual/developer/format/viewselectedby-element-format.md
+            - SelectionSetName Element for ViewSelectedBy: docs-conceptual/developer/format/selectionsetname-element-for-viewselectedby-format.md
+            - TypeName Element for ViewSelectedBy: docs-conceptual/developer/format/typename-element-for-viewselectedby-format.md
+          - WideControl Element:
+            - docs-conceptual/developer/format/widecontrol-element-format.md
+            - AutoSize Element for WideControl: docs-conceptual/developer/format/autosize-element-for-widecontrol-format.md
+            - ColumnNumber Element for WideControl: docs-conceptual/developer/format/columnnumber-element-for-widecontrol-format.md
+            - WideEntries Element for WideControl:
+              - docs-conceptual/developer/format/wideentries-element-for-widecontrol-format.md
+              - WideEntry Element for WideControl: docs-conceptual/developer/format/wideentry-element-for-widecontrol-format.md
+              - EntrySelectedBy Element for WideEntry:
+                - docs-conceptual/developer/format/entryselectedby-element-for-wideentry-format.md
+                - SelectionCondition Element for EntrySelectedBy for WideControl:
+                  - docs-conceptual/developer/format/selectioncondition-element-for-entryselectedby-for-widecontrol-format.md
+                  - PropertyName Element for SelectionCondition for EntrySelectedBy for WideEntry: docs-conceptual/developer/format/propertyname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md
+                  - ScriptBlock Element for SelectionCondition for EntrySelectedBy for WideControl: docs-conceptual/developer/format/scriptblock-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md
+                  - SelectionSetName Element for SelectionCondition for EntrySelectedBy for WideEntry: docs-conceptual/developer/format/selectionsetname-element-for-selectioncondition-for-entryselectedby-for-wideentry-format.md
+                  - TypeName Element for SelectionCondition for EntrySelectedBy for WideControl: docs-conceptual/developer/format/typename-element-for-selectioncondition-for-entryselectedby-for-widecontrol-format.md
+                - TypeName Element for EntrySelectedBy for WideEntry: docs-conceptual/developer/format/typename-element-for-entryselectedby-for-wideentry-format.md
+                - SelectionSetName Element for EntrySelectedBy for WideControl: docs-conceptual/developer/format/selectionsetname-element-for-entryselectedby-for-widecontrol-format.md
+              - WideItem Element for WideControl:
+                - docs-conceptual/developer/format/wideitem-element-for-widecontrol-format.md
+                - FormatString Element for WideItem for WideControl: docs-conceptual/developer/format/formatstring-element-for-wideitem-for-widecontrol-format.md
+                - PropertyName Element for WideItem for WideControl: docs-conceptual/developer/format/propertyname-element-for-wideitem-for-widecontrol-format.md
+                - ScriptBlock Element for WideItem for WideControl: docs-conceptual/developer/format/scriptblock-element-for-wideitem-for-widecontrol-format.md
+    - Writing Help for PowerShell:
+      - Overview: docs-conceptual/developer/help/writing-help-for-windows-powershell-scripts-and-functions.md
+      - Writing Comment-Based Help Topics:
+        - Overview: docs-conceptual/developer/help/writing-comment-based-help-topics.md
+        - Syntax of Comment-Based Help: docs-conceptual/developer/help/syntax-of-comment-based-help.md
+        - Comment-Based Help Keywords: docs-conceptual/developer/help/comment-based-help-keywords.md
+        - Placing Comment-Based Help in Functions: docs-conceptual/developer/help/placing-comment-based-help-in-functions.md
+        - Placing Comment-Based Help in Scripts: docs-conceptual/developer/help/placing-comment-based-help-in-scripts.md
+        - Autogenerated Elements of Comment-Based Help: docs-conceptual/developer/help/autogenerated-elements-of-comment-based-help.md
+        - Examples of Comment-Based Help: docs-conceptual/developer/help/examples-of-comment-based-help.md
+      - Writing XML-Based Help Topics for Commands:
+        - Writing Help for PowerShell Cmdlets:
+          - Overview: docs-conceptual/developer/help/writing-help-for-windows-powershell-cmdlets.md
+          - How to Create the Cmdlet Help File: docs-conceptual/developer/help/how-to-create-the-cmdlet-help-file.md
+          - How to Add the Cmdlet Name and Synopsis to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-the-cmdlet-name-and-synopsis-to-a-cmdlet-help-topic.md
+          - How to Add a Cmdlet Description: docs-conceptual/developer/help/how-to-add-a-cmdlet-description.md
+          - How to Add Syntax to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-syntax-to-a-cmdlet-help-topic.md
+          - How to Add Parameter Information: docs-conceptual/developer/help/how-to-add-parameter-information.md
+          - How to Add Input Types to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-input-types-to-a-cmdlet-help-topic.md
+          - How to Add Return Values to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-return-values-to-a-cmdlet-help-topic.md
+          - How to Add Notes to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-notes-to-a-cmdlet-help-topic.md
+          - How to Add Examples to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-examples-to-a-cmdlet-help-topic.md
+          - How to Add Related Links to a Cmdlet Help Topic: docs-conceptual/developer/help/how-to-add-related-links-to-a-cmdlet-help-topic.md
+        - Writing Help for PowerShell Modules:
+          - Overview: docs-conceptual/developer/help/writing-help-for-windows-powershell-modules.md
+          - Naming Help Files: docs-conceptual/developer/help/naming-help-files.md
+          - Supporting Updatable Help:
+            - docs-conceptual/developer/help/supporting-updatable-help.md
+            - Updatable Help Overview: docs-conceptual/developer/help/updatable-help-overview.md
+            - "Updatable Help Authoring: docs-conceptual/developer/Step-by-Step": docs-conceptual/developer/help/updatable-help-authoring-step-by-step.md
+            - How Updatable Help Works: docs-conceptual/developer/help/how-updatable-help-works.md
+            - How to Create a HelpInfo XML File:
+              - docs-conceptual/developer/help/how-to-create-a-helpinfo-xml-file.md
+              - HelpInfo XML Schema: docs-conceptual/developer/help/helpinfo-xml-schema.md
+              - HelpInfo XML Sample File: docs-conceptual/developer/help/helpinfo-xml-sample-file.md
+              - How to Name a HelpInfo XML File: docs-conceptual/developer/help/how-to-name-a-helpinfo-xml-file.md
+              - How to Set HelpInfo XML Version Numbers: docs-conceptual/developer/help/how-to-set-helpinfo-xml-version-numbers.md
+            - How to Prepare Updatable Help CAB Files:
+              - docs-conceptual/developer/help/how-to-prepare-updatable-help-cab-files.md
+              - How to Create and Upload CAB Files: docs-conceptual/developer/help/how-to-create-and-upload-cab-files.md
+              - How to Name an Updatable Help CAB File: docs-conceptual/developer/help/how-to-name-an-updatable-help-cab-file.md
+              - File Types Permitted in an Updatable Help CAB File: docs-conceptual/developer/help/file-types-permitted-in-an-updatable-help-cab-file.md
+              - How to Update Help Files: docs-conceptual/developer/help/how-to-update-help-files.md
+              - How to Test Updatable Help: docs-conceptual/developer/help/how-to-test-updatable-help.md
+            - Supporting Online Help: docs-conceptual/developer/help/supporting-online-help.md
+        - Writing Help for PowerShell Providers:
+          - How to Add Dynamic Parameters to a Provider Help Topic: docs-conceptual/developer/help/how-to-add-dynamic-parameters-to-a-provider-help-topic.md
+          - How to Add a See Also Section to a Provider Help Topic: docs-conceptual/developer/help/how-to-add-a-see-also-section-to-a-provider-help-topic.md
+    - Extended Type System (ETS):
+      - ETS Overview: docs-conceptual/developer/ets/overview.md
+      - ETS members: docs-conceptual/developer/ets/members.md
+      - ETS member sets: docs-conceptual/developer/ets/membersets.md
+      - ETS properties: docs-conceptual/developer/ets/properties.md
+      - ETS methods: docs-conceptual/developer/ets/methods.md
+      - ETS type converters: docs-conceptual/developer/ets/typeconverters.md
+      - Errors and exceptions in ETS: docs-conceptual/developer/ets/errors-exceptions.md
+    - Windows PowerShell Programmer's Guide:
+      - docs-conceptual/developer/prog-guide/windows-powershell-programmer-s-guide.md
+      - How to Create a PowerShell Provider:
+        - docs-conceptual/developer/prog-guide/how-to-create-a-windows-powershell-provider.md
+        - Designing Your PowerShell Provider: docs-conceptual/developer/prog-guide/designing-your-windows-powershell-provider.md
+        - Creating a Basic PowerShell Provider: docs-conceptual/developer/prog-guide/creating-a-basic-windows-powershell-provider.md
+        - Creating a PowerShell Drive Provider: docs-conceptual/developer/prog-guide/creating-a-windows-powershell-drive-provider.md
+        - Creating a PowerShell Item Provider: docs-conceptual/developer/prog-guide/creating-a-windows-powershell-item-provider.md
+        - Creating a PowerShell Container Provider: docs-conceptual/developer/prog-guide/creating-a-windows-powershell-container-provider.md
+        - Creating a PowerShell Navigation Provider: docs-conceptual/developer/prog-guide/creating-a-windows-powershell-navigation-provider.md
+        - Creating a PowerShell Content Provider: docs-conceptual/developer/prog-guide/creating-a-windows-powershell-content-provider.md
+        - Creating a PowerShell Property Provider: docs-conceptual/developer/prog-guide/creating-a-windows-powershell-property-provider.md
+      - PowerShell Concepts: docs-conceptual/developer/prog-guide/windows-powershell-concepts.md
+      - PowerShell Sample Code:
+        - docs-conceptual/developer/prog-guide/windows-powershell-sample-code.md
+        - AccessDbProviderSample01 Code Sample: docs-conceptual/developer/prog-guide/accessdbprovidersample01-code-sample.md
+        - AccessDbProviderSample02 Code Sample: docs-conceptual/developer/prog-guide/accessdbprovidersample02-code-sample.md
+        - AccessDbProviderSample03 Code Sample: docs-conceptual/developer/prog-guide/accessdbprovidersample03-code-sample.md
+        - AccessDbProviderSample04 Code Sample: docs-conceptual/developer/prog-guide/accessdbprovidersample04-code-sample.md
+        - AccessDbProviderSample05 Code Sample: docs-conceptual/developer/prog-guide/accessdbprovidersample05-code-sample.md
+        - AccessDbProviderSample06 Code Sample: docs-conceptual/developer/prog-guide/accessdbprovidersample06-code-sample.md
+        - GetProc01 Code Samples:
+          - docs-conceptual/developer/prog-guide/getproc01-code-samples.md
+          - GetProc01 (C#) Sample Code: docs-conceptual/developer/prog-guide/getproc01-csharp-sample-code.md
+          - GetProc01 (VB.NET) Sample Code: docs-conceptual/developer/prog-guide/getproc01-vb-net-sample-code.md
+        - GetProc02 Code Samples:
+          - docs-conceptual/developer/prog-guide/getproc02-code-samples.md
+          - GetProc02 (C#) Sample Code: docs-conceptual/developer/prog-guide/getproc02-csharp-sample-code.md
+          - GetProc02 (VB.NET) Sample Code: docs-conceptual/developer/prog-guide/getproc02-vb-net-sample-code.md
+        - GetProc03 Code Samples:
+          - docs-conceptual/developer/prog-guide/getproc03-code-samples.md
+          - GetProc03 (C#) Sample Code: docs-conceptual/developer/prog-guide/getproc03-csharp-sample-code.md
+          - GetProc03 (VB.NET) Sample Code: docs-conceptual/developer/prog-guide/getproc03-vb-net-sample-code.md
+        - GetProc04 Code Samples:
+          - docs-conceptual/developer/prog-guide/getproc04-code-samples.md
+          - GetProc04 (C#) Sample Code: docs-conceptual/developer/prog-guide/getproc04-csharp-sample-code.md
+          - GetProc04 (VB.NET) Sample Code: docs-conceptual/developer/prog-guide/getproc04-vb-net-sample-code.md
+        - GetProc05 Code Samples:
+          - docs-conceptual/developer/prog-guide/getproc05-code-samples.md
+          - GetProc05 (C#) Sample Code: docs-conceptual/developer/prog-guide/getproc05-csharp-sample-code.md
+          - GetProc05 (VB.NET) Sample Code: docs-conceptual/developer/prog-guide/getproc05-vb-net-sample-code.md
+        - StopProc01 Code Samples:
+          - docs-conceptual/developer/prog-guide/stopproc01-code-samples.md
+          - StopProc01 (C#) Sample Code: docs-conceptual/developer/prog-guide/stopproc01-csharp-sample-code.md
+        - StopProcessSample04 Code Samples:
+          - docs-conceptual/developer/prog-guide/stopprocesssample04-code-samples.md
+          - StopProcessSample04 (C#) Sample Code: docs-conceptual/developer/prog-guide/stopprocesssample04-csharp-sample-code.md
+          - StopProcessSample04 (VB.NET) Sample Code: docs-conceptual/developer/prog-guide/stopprocesssample04-vb-net-sample-code.md
+        - Runspace01 Code Samples:
+          - docs-conceptual/developer/prog-guide/runspace01-code-samples.md
+          - Runspace01 (C#) Code Sample: docs-conceptual/developer/prog-guide/runspace01-csharp-code-sample.md
+          - Runspace01 (VB.NET) Code Sample: docs-conceptual/developer/prog-guide/runspace01-vb-net-code-sample.md
+        - Runspace02 Code Samples:
+          - docs-conceptual/developer/prog-guide/runspace02-code-samples.md
+          - Runspace02 (C#) Code Sample: docs-conceptual/developer/prog-guide/runspace02-csharp-code-sample.md
+          - Runspace02 (VB.NET) Code Sample: docs-conceptual/developer/prog-guide/runspace02-vb-net-code-sample.md
+        - RunSpace03 Code Samples:
+          - docs-conceptual/developer/prog-guide/runspace03-code-samples.md
+          - RunSpace03 (C#) Code Sample: docs-conceptual/developer/prog-guide/runspace03-csharp-code-sample.md
+          - RunSpace03 (VB.NET) Code Sample: docs-conceptual/developer/prog-guide/runspace03-vb-net-code-sample.md
+        - RunSpace04 Code Samples:
+          - docs-conceptual/developer/prog-guide/runspace04-code-samples.md
+          - RunSpace04 (VB.NET) Code Sample: docs-conceptual/developer/prog-guide/runspace04-vb-net-code-sample.md
+        - RunSpace05 Code Sample: docs-conceptual/developer/prog-guide/runspace05-code-sample.md
+        - RunSpace06 Code Sample: docs-conceptual/developer/prog-guide/runspace06-code-sample.md
+        - RunSpace07 Code Sample: docs-conceptual/developer/prog-guide/runspace07-code-sample.md
+        - RunSpace08 Code Sample: docs-conceptual/developer/prog-guide/runspace08-code-sample.md
+        - RunSpace09 Code Sample: docs-conceptual/developer/prog-guide/runspace09-code-sample.md
+        - RunSpace10 Code Sample: docs-conceptual/developer/prog-guide/runspace10-code-sample.md
+- Docs Contributor's Guide:
+  - Overview: docs-conceptual/community/contributing/overview.md
+  - Get started writing docs: docs-conceptual/community/contributing/get-started-writing.md
+  - Contribute using GitHub Codespaces: docs-conceptual/community/contributing/using-github-codespaces.md
+  - Markdown best practices: docs-conceptual/community/contributing/general-markdown.md
+  - PowerShell-Docs style guide: docs-conceptual/community/contributing/powershell-style-guide.md
+  - Editorial checklist: docs-conceptual/community/contributing/editorial-checklist.md
+  - Product terminology and branding guidelines: docs-conceptual/community/contributing/product-terminology.md
+  - How to file a Docs issue: docs-conceptual/community/contributing/file-an-issue.md
+  - Submitting a pull request: docs-conceptual/community/contributing/pull-requests.md
+  - Contributing quality improvements: docs-conceptual/community/contributing/quality-improvements.md
+  - Hacktoberfest and other hack-a-thon events: docs-conceptual/community/contributing/hackathons.md
+  - How we manage issues: docs-conceptual/community/contributing/managing-issues.md
+  - How we manage pull requests: docs-conceptual/community/contributing/managing-pull-requests.md
+  - Labelling in GitHub: docs-conceptual/community/contributing/labelling-in-github.md
+- PowerShell support lifecycle: docs-conceptual/install/PowerShell-Support-Lifecycle.md
+- Reference:
+  - CimCmdlets:
+    - Commands: 7.5/CimCmdlets/CimCmdlets.md
+    - Get-CimAssociatedInstance: 7.5/CimCmdlets/Get-CimAssociatedInstance.md
+    - Get-CimClass: 7.5/CimCmdlets/Get-CimClass.md
+    - Get-CimInstance: 7.5/CimCmdlets/Get-CimInstance.md
+    - Get-CimSession: 7.5/CimCmdlets/Get-CimSession.md
+    - Invoke-CimMethod: 7.5/CimCmdlets/Invoke-CimMethod.md
+    - New-CimInstance: 7.5/CimCmdlets/New-CimInstance.md
+    - New-CimSession: 7.5/CimCmdlets/New-CimSession.md
+    - New-CimSessionOption: 7.5/CimCmdlets/New-CimSessionOption.md
+    - Register-CimIndicationEvent: 7.5/CimCmdlets/Register-CimIndicationEvent.md
+    - Remove-CimInstance: 7.5/CimCmdlets/Remove-CimInstance.md
+    - Remove-CimSession: 7.5/CimCmdlets/Remove-CimSession.md
+    - Set-CimInstance: 7.5/CimCmdlets/Set-CimInstance.md
+  - Microsoft.PowerShell.Archive:
+    - Commands: 7.5/Microsoft.PowerShell.Archive/Microsoft.PowerShell.Archive.md
+    - Compress-Archive: 7.5/Microsoft.PowerShell.Archive/Compress-Archive.md
+    - Expand-Archive: 7.5/Microsoft.PowerShell.Archive/Expand-Archive.md
+  - Microsoft.PowerShell.Core:
+    - Commands: 7.5/Microsoft.PowerShell.Core/Microsoft.PowerShell.Core.md
+    - About:
+      - About: 7.5/Microsoft.PowerShell.Core/About/About.md
+      - about_Aliases: 7.5/Microsoft.PowerShell.Core/About/about_Aliases.md
+      - about_Alias_Provider: 7.5/Microsoft.PowerShell.Core/About/about_Alias_Provider.md
+      - about_ANSI_Terminals: 7.5/Microsoft.PowerShell.Core/About/about_ANSI_Terminals.md
+      - about_Arithmetic_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Arithmetic_Operators.md
+      - about_Arrays: 7.5/Microsoft.PowerShell.Core/About/about_Arrays.md
+      - about_Assignment_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Assignment_Operators.md
+      - about_Automatic_Variables: 7.5/Microsoft.PowerShell.Core/About/about_Automatic_Variables.md
+      - about_Booleans: 7.5/Microsoft.PowerShell.Core/About/about_Booleans.md
+      - about_Break: 7.5/Microsoft.PowerShell.Core/About/about_Break.md
+      - about_Built-in_Functions: 7.5/Microsoft.PowerShell.Core/About/about_Built-in_Functions.md
+      - about_Calculated_Properties: 7.5/Microsoft.PowerShell.Core/About/about_Calculated_Properties.md
+      - about_Calling_Generic_Methods: 7.5/Microsoft.PowerShell.Core/About/about_Calling_Generic_Methods.md
+      - about_Case-Sensitivity: 7.5/Microsoft.PowerShell.Core/About/about_Case-Sensitivity.md
+      - about_Character_Encoding: 7.5/Microsoft.PowerShell.Core/About/about_Character_Encoding.md
+      - about_CimSession: 7.5/Microsoft.PowerShell.Core/About/about_CimSession.md
+      - about_Classes: 7.5/Microsoft.PowerShell.Core/About/about_Classes.md
+      - about_Classes_Constructors: 7.5/Microsoft.PowerShell.Core/About/about_Classes_Constructors.md
+      - about_Classes_Inheritance: 7.5/Microsoft.PowerShell.Core/About/about_Classes_Inheritance.md
+      - about_Classes_Methods: 7.5/Microsoft.PowerShell.Core/About/about_Classes_Methods.md
+      - about_Classes_Properties: 7.5/Microsoft.PowerShell.Core/About/about_Classes_Properties.md
+      - about_Command_Precedence: 7.5/Microsoft.PowerShell.Core/About/about_Command_Precedence.md
+      - about_Command_Syntax: 7.5/Microsoft.PowerShell.Core/About/about_Command_Syntax.md
+      - about_Comment_Based_Help: 7.5/Microsoft.PowerShell.Core/About/about_Comment_Based_Help.md
+      - about_CommonParameters: 7.5/Microsoft.PowerShell.Core/About/about_CommonParameters.md
+      - about_Comparison_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Comparison_Operators.md
+      - about_Continue: 7.5/Microsoft.PowerShell.Core/About/about_Continue.md
+      - about_Core_Commands: 7.5/Microsoft.PowerShell.Core/About/about_Core_Commands.md
+      - about_Data_Files: 7.5/Microsoft.PowerShell.Core/About/about_Data_Files.md
+      - about_Data_Sections: 7.5/Microsoft.PowerShell.Core/About/about_Data_Sections.md
+      - about_Debuggers: 7.5/Microsoft.PowerShell.Core/About/about_Debuggers.md
+      - about_Do: 7.5/Microsoft.PowerShell.Core/About/about_Do.md
+      - about_Enum: 7.5/Microsoft.PowerShell.Core/About/about_Enum.md
+      - about_Environment_Provider: 7.5/Microsoft.PowerShell.Core/About/about_Environment_Provider.md
+      - about_Environment_Variables: 7.5/Microsoft.PowerShell.Core/About/about_Environment_Variables.md
+      - about_Execution_Policies: 7.5/Microsoft.PowerShell.Core/About/about_Execution_Policies.md
+      - about_Experimental_Features: 7.5/Microsoft.PowerShell.Core/About/about_Experimental_Features.md
+      - about_FileSystem_Provider: 7.5/Microsoft.PowerShell.Core/About/about_FileSystem_Provider.md
+      - about_For: 7.5/Microsoft.PowerShell.Core/About/about_For.md
+      - about_Foreach: 7.5/Microsoft.PowerShell.Core/About/about_Foreach.md
+      - about_Format.ps1xml: 7.5/Microsoft.PowerShell.Core/About/about_Format.ps1xml.md
+      - about_Functions: 7.5/Microsoft.PowerShell.Core/About/about_Functions.md
+      - about_Functions_Advanced: 7.5/Microsoft.PowerShell.Core/About/about_Functions_Advanced.md
+      - about_Functions_Advanced_Methods: 7.5/Microsoft.PowerShell.Core/About/about_Functions_Advanced_Methods.md
+      - about_Functions_Advanced_Parameters: 7.5/Microsoft.PowerShell.Core/About/about_Functions_Advanced_Parameters.md
+      - about_Functions_Argument_Completion: 7.5/Microsoft.PowerShell.Core/About/about_Functions_Argument_Completion.md
+      - about_Functions_CmdletBindingAttribute: 7.5/Microsoft.PowerShell.Core/About/about_Functions_CmdletBindingAttribute.md
+      - about_Functions_OutputTypeAttribute: 7.5/Microsoft.PowerShell.Core/About/about_Functions_OutputTypeAttribute.md
+      - about_Function_Provider: 7.5/Microsoft.PowerShell.Core/About/about_Function_Provider.md
+      - about_Group_Policy_Settings: 7.5/Microsoft.PowerShell.Core/About/about_Group_Policy_Settings.md
+      - about_Hash_Tables: 7.5/Microsoft.PowerShell.Core/About/about_Hash_Tables.md
+      - about_Hidden: 7.5/Microsoft.PowerShell.Core/About/about_Hidden.md
+      - about_History: 7.5/Microsoft.PowerShell.Core/About/about_History.md
+      - about_If: 7.5/Microsoft.PowerShell.Core/About/about_If.md
+      - about_Intrinsic_Members: 7.5/Microsoft.PowerShell.Core/About/about_Intrinsic_Members.md
+      - about_Jobs: 7.5/Microsoft.PowerShell.Core/About/about_Jobs.md
+      - about_Job_Details: 7.5/Microsoft.PowerShell.Core/About/about_Job_Details.md
+      - about_Join: 7.5/Microsoft.PowerShell.Core/About/about_Join.md
+      - about_Language_Keywords: 7.5/Microsoft.PowerShell.Core/About/about_Language_Keywords.md
+      - about_Language_Modes: 7.5/Microsoft.PowerShell.Core/About/about_Language_Modes.md
+      - about_Line_Editing: 7.5/Microsoft.PowerShell.Core/About/about_Line_Editing.md
+      - about_Locations: 7.5/Microsoft.PowerShell.Core/About/about_Locations.md
+      - about_Logging_Non-Windows: 7.5/Microsoft.PowerShell.Core/About/about_Logging_Non-Windows.md
+      - about_Logging_Windows: 7.5/Microsoft.PowerShell.Core/About/about_Logging_Windows.md
+      - about_Logical_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Logical_Operators.md
+      - about_Member-Access_Enumeration: 7.5/Microsoft.PowerShell.Core/About/about_Member-Access_Enumeration.md
+      - about_Methods: 7.5/Microsoft.PowerShell.Core/About/about_Methods.md
+      - about_Modules: 7.5/Microsoft.PowerShell.Core/About/about_Modules.md
+      - about_Module_Manifests: 7.5/Microsoft.PowerShell.Core/About/about_Module_Manifests.md
+      - about_Numeric_Literals: 7.5/Microsoft.PowerShell.Core/About/about_Numeric_Literals.md
+      - about_Objects: 7.5/Microsoft.PowerShell.Core/About/about_Objects.md
+      - about_Object_Creation: 7.5/Microsoft.PowerShell.Core/About/about_Object_Creation.md
+      - about_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Operators.md
+      - about_Operator_Precedence: 7.5/Microsoft.PowerShell.Core/About/about_Operator_Precedence.md
+      - about_Output_Streams: 7.5/Microsoft.PowerShell.Core/About/about_Output_Streams.md
+      - about_PackageManagement: 7.5/Microsoft.PowerShell.Core/About/about_PackageManagement.md
+      - about_Parameters: 7.5/Microsoft.PowerShell.Core/About/about_Parameters.md
+      - about_Parameters_Default_Values: 7.5/Microsoft.PowerShell.Core/About/about_Parameters_Default_Values.md
+      - about_Parameter_Binding: 7.5/Microsoft.PowerShell.Core/About/about_Parameter_Binding.md
+      - about_Parameter_Sets: 7.5/Microsoft.PowerShell.Core/About/about_Parameter_Sets.md
+      - about_Parsing: 7.5/Microsoft.PowerShell.Core/About/about_Parsing.md
+      - about_Path_Syntax: 7.5/Microsoft.PowerShell.Core/About/about_Path_Syntax.md
+      - about_Pipelines: 7.5/Microsoft.PowerShell.Core/About/about_Pipelines.md
+      - about_Pipeline_Chain_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Pipeline_Chain_Operators.md
+      - about_PowerShell_Config: 7.5/Microsoft.PowerShell.Core/About/about_PowerShell_Config.md
+      - about_PowerShell_Editions: 7.5/Microsoft.PowerShell.Core/About/about_PowerShell_Editions.md
+      - about_Preference_Variables: 7.5/Microsoft.PowerShell.Core/About/about_Preference_Variables.md
+      - about_Profiles: 7.5/Microsoft.PowerShell.Core/About/about_Profiles.md
+      - about_Prompts: 7.5/Microsoft.PowerShell.Core/About/about_Prompts.md
+      - about_Properties: 7.5/Microsoft.PowerShell.Core/About/about_Properties.md
+      - about_Providers: 7.5/Microsoft.PowerShell.Core/About/about_Providers.md
+      - about_PSConsoleHostReadLine: 7.5/Microsoft.PowerShell.Core/About/about_PSConsoleHostReadLine.md
+      - about_PSCustomObject: 7.5/Microsoft.PowerShell.Core/About/about_PSCustomObject.md
+      - about_PSItem: 7.5/Microsoft.PowerShell.Core/About/about_PSItem.md
+      - about_PSModulePath: 7.5/Microsoft.PowerShell.Core/About/about_PSModulePath.md
+      - about_PSSessions: 7.5/Microsoft.PowerShell.Core/About/about_PSSessions.md
+      - about_PSSession_Details: 7.5/Microsoft.PowerShell.Core/About/about_PSSession_Details.md
+      - about_Pwsh: 7.5/Microsoft.PowerShell.Core/About/about_Pwsh.md
+      - about_Quoting_Rules: 7.5/Microsoft.PowerShell.Core/About/about_Quoting_Rules.md
+      - about_Redirection: 7.5/Microsoft.PowerShell.Core/About/about_Redirection.md
+      - about_Ref: 7.5/Microsoft.PowerShell.Core/About/about_Ref.md
+      - about_Registry_Provider: 7.5/Microsoft.PowerShell.Core/About/about_Registry_Provider.md
+      - about_Regular_Expressions: 7.5/Microsoft.PowerShell.Core/About/about_Regular_Expressions.md
+      - about_Remote: 7.5/Microsoft.PowerShell.Core/About/about_Remote.md
+      - about_Remote_Disconnected_Sessions: 7.5/Microsoft.PowerShell.Core/About/about_Remote_Disconnected_Sessions.md
+      - about_Remote_Jobs: 7.5/Microsoft.PowerShell.Core/About/about_Remote_Jobs.md
+      - about_Remote_Output: 7.5/Microsoft.PowerShell.Core/About/about_Remote_Output.md
+      - about_Remote_Requirements: 7.5/Microsoft.PowerShell.Core/About/about_Remote_Requirements.md
+      - about_Remote_Troubleshooting: 7.5/Microsoft.PowerShell.Core/About/about_Remote_Troubleshooting.md
+      - about_Remote_Variables: 7.5/Microsoft.PowerShell.Core/About/about_Remote_Variables.md
+      - about_Requires: 7.5/Microsoft.PowerShell.Core/About/about_Requires.md
+      - about_Reserved_Words: 7.5/Microsoft.PowerShell.Core/About/about_Reserved_Words.md
+      - about_Return: 7.5/Microsoft.PowerShell.Core/About/about_Return.md
+      - about_Run_With_PowerShell: 7.5/Microsoft.PowerShell.Core/About/about_Run_With_PowerShell.md
+      - about_Scopes: 7.5/Microsoft.PowerShell.Core/About/about_Scopes.md
+      - about_Scripts: 7.5/Microsoft.PowerShell.Core/About/about_Scripts.md
+      - about_Script_Blocks: 7.5/Microsoft.PowerShell.Core/About/about_Script_Blocks.md
+      - about_Script_Internationalization: 7.5/Microsoft.PowerShell.Core/About/about_Script_Internationalization.md
+      - about_Session_Configurations: 7.5/Microsoft.PowerShell.Core/About/about_Session_Configurations.md
+      - about_Session_Configuration_Files: 7.5/Microsoft.PowerShell.Core/About/about_Session_Configuration_Files.md
+      - about_Signing: 7.5/Microsoft.PowerShell.Core/About/about_Signing.md
+      - about_Simplified_Syntax: 7.5/Microsoft.PowerShell.Core/About/about_Simplified_Syntax.md
+      - about_Special_Characters: 7.5/Microsoft.PowerShell.Core/About/about_Special_Characters.md
+      - about_Splatting: 7.5/Microsoft.PowerShell.Core/About/about_Splatting.md
+      - about_Split: 7.5/Microsoft.PowerShell.Core/About/about_Split.md
+      - about_Switch: 7.5/Microsoft.PowerShell.Core/About/about_Switch.md
+      - about_Tab_Expansion: 7.5/Microsoft.PowerShell.Core/About/about_Tab_Expansion.md
+      - about_Telemetry: 7.5/Microsoft.PowerShell.Core/About/about_Telemetry.md
+      - about_Thread_Jobs: 7.5/Microsoft.PowerShell.Core/About/about_Thread_Jobs.md
+      - about_Throw: 7.5/Microsoft.PowerShell.Core/About/about_Throw.md
+      - about_Trap: 7.5/Microsoft.PowerShell.Core/About/about_Trap.md
+      - about_Try_Catch_Finally: 7.5/Microsoft.PowerShell.Core/About/about_Try_Catch_Finally.md
+      - about_Types.ps1xml: 7.5/Microsoft.PowerShell.Core/About/about_Types.ps1xml.md
+      - about_Type_Accelerators: 7.5/Microsoft.PowerShell.Core/About/about_Type_Accelerators.md
+      - about_Type_Operators: 7.5/Microsoft.PowerShell.Core/About/about_Type_Operators.md
+      - about_Updatable_Help: 7.5/Microsoft.PowerShell.Core/About/about_Updatable_Help.md
+      - about_Update_Notifications: 7.5/Microsoft.PowerShell.Core/About/about_Update_Notifications.md
+      - about_Using: 7.5/Microsoft.PowerShell.Core/About/about_Using.md
+      - about_Variables: 7.5/Microsoft.PowerShell.Core/About/about_Variables.md
+      - about_Variable_Provider: 7.5/Microsoft.PowerShell.Core/About/about_Variable_Provider.md
+      - about_While: 7.5/Microsoft.PowerShell.Core/About/about_While.md
+      - about_Wildcards: 7.5/Microsoft.PowerShell.Core/About/about_Wildcards.md
+      - about_Windows_PowerShell_Compatibility: 7.5/Microsoft.PowerShell.Core/About/about_Windows_PowerShell_Compatibility.md
+    - Add-History: 7.5/Microsoft.PowerShell.Core/Add-History.md
+    - Clear-History: 7.5/Microsoft.PowerShell.Core/Clear-History.md
+    - Clear-Host: 7.5/Microsoft.PowerShell.Core/Clear-Host.md
+    - Connect-PSSession: 7.5/Microsoft.PowerShell.Core/Connect-PSSession.md
+    - Debug-Job: 7.5/Microsoft.PowerShell.Core/Debug-Job.md
+    - Disable-ExperimentalFeature: 7.5/Microsoft.PowerShell.Core/Disable-ExperimentalFeature.md
+    - Disable-PSRemoting: 7.5/Microsoft.PowerShell.Core/Disable-PSRemoting.md
+    - Disable-PSSessionConfiguration: 7.5/Microsoft.PowerShell.Core/Disable-PSSessionConfiguration.md
+    - Disconnect-PSSession: 7.5/Microsoft.PowerShell.Core/Disconnect-PSSession.md
+    - Enable-ExperimentalFeature: 7.5/Microsoft.PowerShell.Core/Enable-ExperimentalFeature.md
+    - Enable-PSRemoting: 7.5/Microsoft.PowerShell.Core/Enable-PSRemoting.md
+    - Enable-PSSessionConfiguration: 7.5/Microsoft.PowerShell.Core/Enable-PSSessionConfiguration.md
+    - Enter-PSHostProcess: 7.5/Microsoft.PowerShell.Core/Enter-PSHostProcess.md
+    - Enter-PSSession: 7.5/Microsoft.PowerShell.Core/Enter-PSSession.md
+    - Exit-PSHostProcess: 7.5/Microsoft.PowerShell.Core/Exit-PSHostProcess.md
+    - Exit-PSSession: 7.5/Microsoft.PowerShell.Core/Exit-PSSession.md
+    - Export-ModuleMember: 7.5/Microsoft.PowerShell.Core/Export-ModuleMember.md
+    - ForEach-Object: 7.5/Microsoft.PowerShell.Core/ForEach-Object.md
+    - Get-Command: 7.5/Microsoft.PowerShell.Core/Get-Command.md
+    - Get-ExperimentalFeature: 7.5/Microsoft.PowerShell.Core/Get-ExperimentalFeature.md
+    - Get-Help: 7.5/Microsoft.PowerShell.Core/Get-Help.md
+    - Get-History: 7.5/Microsoft.PowerShell.Core/Get-History.md
+    - Get-Job: 7.5/Microsoft.PowerShell.Core/Get-Job.md
+    - Get-Module: 7.5/Microsoft.PowerShell.Core/Get-Module.md
+    - Get-PSHostProcessInfo: 7.5/Microsoft.PowerShell.Core/Get-PSHostProcessInfo.md
+    - Get-PSSession: 7.5/Microsoft.PowerShell.Core/Get-PSSession.md
+    - Get-PSSessionCapability: 7.5/Microsoft.PowerShell.Core/Get-PSSessionCapability.md
+    - Get-PSSessionConfiguration: 7.5/Microsoft.PowerShell.Core/Get-PSSessionConfiguration.md
+    - Get-PSSubsystem: 7.5/Microsoft.PowerShell.Core/Get-PSSubsystem.md
+    - Import-Module: 7.5/Microsoft.PowerShell.Core/Import-Module.md
+    - Invoke-Command: 7.5/Microsoft.PowerShell.Core/Invoke-Command.md
+    - Invoke-History: 7.5/Microsoft.PowerShell.Core/Invoke-History.md
+    - New-Module: 7.5/Microsoft.PowerShell.Core/New-Module.md
+    - New-ModuleManifest: 7.5/Microsoft.PowerShell.Core/New-ModuleManifest.md
+    - New-PSRoleCapabilityFile: 7.5/Microsoft.PowerShell.Core/New-PSRoleCapabilityFile.md
+    - New-PSSession: 7.5/Microsoft.PowerShell.Core/New-PSSession.md
+    - New-PSSessionConfigurationFile: 7.5/Microsoft.PowerShell.Core/New-PSSessionConfigurationFile.md
+    - New-PSSessionOption: 7.5/Microsoft.PowerShell.Core/New-PSSessionOption.md
+    - New-PSTransportOption: 7.5/Microsoft.PowerShell.Core/New-PSTransportOption.md
+    - Out-Default: 7.5/Microsoft.PowerShell.Core/Out-Default.md
+    - Out-Host: 7.5/Microsoft.PowerShell.Core/Out-Host.md
+    - Out-Null: 7.5/Microsoft.PowerShell.Core/Out-Null.md
+    - Receive-Job: 7.5/Microsoft.PowerShell.Core/Receive-Job.md
+    - Receive-PSSession: 7.5/Microsoft.PowerShell.Core/Receive-PSSession.md
+    - Register-ArgumentCompleter: 7.5/Microsoft.PowerShell.Core/Register-ArgumentCompleter.md
+    - Register-PSSessionConfiguration: 7.5/Microsoft.PowerShell.Core/Register-PSSessionConfiguration.md
+    - Remove-Job: 7.5/Microsoft.PowerShell.Core/Remove-Job.md
+    - Remove-Module: 7.5/Microsoft.PowerShell.Core/Remove-Module.md
+    - Remove-PSSession: 7.5/Microsoft.PowerShell.Core/Remove-PSSession.md
+    - Save-Help: 7.5/Microsoft.PowerShell.Core/Save-Help.md
+    - Set-PSDebug: 7.5/Microsoft.PowerShell.Core/Set-PSDebug.md
+    - Set-PSSessionConfiguration: 7.5/Microsoft.PowerShell.Core/Set-PSSessionConfiguration.md
+    - Set-StrictMode: 7.5/Microsoft.PowerShell.Core/Set-StrictMode.md
+    - Start-Job: 7.5/Microsoft.PowerShell.Core/Start-Job.md
+    - Stop-Job: 7.5/Microsoft.PowerShell.Core/Stop-Job.md
+    - Switch-Process: 7.5/Microsoft.PowerShell.Core/Switch-Process.md
+    - TabExpansion2: 7.5/Microsoft.PowerShell.Core/TabExpansion2.md
+    - Test-ModuleManifest: 7.5/Microsoft.PowerShell.Core/Test-ModuleManifest.md
+    - Test-PSSessionConfigurationFile: 7.5/Microsoft.PowerShell.Core/Test-PSSessionConfigurationFile.md
+    - Unregister-PSSessionConfiguration: 7.5/Microsoft.PowerShell.Core/Unregister-PSSessionConfiguration.md
+    - Update-Help: 7.5/Microsoft.PowerShell.Core/Update-Help.md
+    - Wait-Job: 7.5/Microsoft.PowerShell.Core/Wait-Job.md
+    - Where-Object: 7.5/Microsoft.PowerShell.Core/Where-Object.md
+  - Microsoft.PowerShell.Diagnostics:
+    - Commands: 7.5/Microsoft.PowerShell.Diagnostics/Microsoft.PowerShell.Diagnostics.md
+    - Get-Counter: 7.5/Microsoft.PowerShell.Diagnostics/Get-Counter.md
+    - Get-WinEvent: 7.5/Microsoft.PowerShell.Diagnostics/Get-WinEvent.md
+    - New-WinEvent: 7.5/Microsoft.PowerShell.Diagnostics/New-WinEvent.md
+  - Microsoft.PowerShell.Host:
+    - Commands: 7.5/Microsoft.PowerShell.Host/Microsoft.PowerShell.Host.md
+    - Start-Transcript: 7.5/Microsoft.PowerShell.Host/Start-Transcript.md
+    - Stop-Transcript: 7.5/Microsoft.PowerShell.Host/Stop-Transcript.md
+  - Microsoft.PowerShell.Management:
+    - Commands: 7.5/Microsoft.PowerShell.Management/Microsoft.PowerShell.Management.md
+    - Add-Content: 7.5/Microsoft.PowerShell.Management/Add-Content.md
+    - Clear-Content: 7.5/Microsoft.PowerShell.Management/Clear-Content.md
+    - Clear-Item: 7.5/Microsoft.PowerShell.Management/Clear-Item.md
+    - Clear-ItemProperty: 7.5/Microsoft.PowerShell.Management/Clear-ItemProperty.md
+    - Clear-RecycleBin: 7.5/Microsoft.PowerShell.Management/Clear-RecycleBin.md
+    - Convert-Path: 7.5/Microsoft.PowerShell.Management/Convert-Path.md
+    - Copy-Item: 7.5/Microsoft.PowerShell.Management/Copy-Item.md
+    - Copy-ItemProperty: 7.5/Microsoft.PowerShell.Management/Copy-ItemProperty.md
+    - Debug-Process: 7.5/Microsoft.PowerShell.Management/Debug-Process.md
+    - Get-ChildItem: 7.5/Microsoft.PowerShell.Management/Get-ChildItem.md
+    - Get-Clipboard: 7.5/Microsoft.PowerShell.Management/Get-Clipboard.md
+    - Get-ComputerInfo: 7.5/Microsoft.PowerShell.Management/Get-ComputerInfo.md
+    - Get-Content: 7.5/Microsoft.PowerShell.Management/Get-Content.md
+    - Get-HotFix: 7.5/Microsoft.PowerShell.Management/Get-HotFix.md
+    - Get-Item: 7.5/Microsoft.PowerShell.Management/Get-Item.md
+    - Get-ItemProperty: 7.5/Microsoft.PowerShell.Management/Get-ItemProperty.md
+    - Get-ItemPropertyValue: 7.5/Microsoft.PowerShell.Management/Get-ItemPropertyValue.md
+    - Get-Location: 7.5/Microsoft.PowerShell.Management/Get-Location.md
+    - Get-Process: 7.5/Microsoft.PowerShell.Management/Get-Process.md
+    - Get-PSDrive: 7.5/Microsoft.PowerShell.Management/Get-PSDrive.md
+    - Get-PSProvider: 7.5/Microsoft.PowerShell.Management/Get-PSProvider.md
+    - Get-Service: 7.5/Microsoft.PowerShell.Management/Get-Service.md
+    - Get-TimeZone: 7.5/Microsoft.PowerShell.Management/Get-TimeZone.md
+    - Invoke-Item: 7.5/Microsoft.PowerShell.Management/Invoke-Item.md
+    - Join-Path: 7.5/Microsoft.PowerShell.Management/Join-Path.md
+    - Move-Item: 7.5/Microsoft.PowerShell.Management/Move-Item.md
+    - Move-ItemProperty: 7.5/Microsoft.PowerShell.Management/Move-ItemProperty.md
+    - New-Item: 7.5/Microsoft.PowerShell.Management/New-Item.md
+    - New-ItemProperty: 7.5/Microsoft.PowerShell.Management/New-ItemProperty.md
+    - New-PSDrive: 7.5/Microsoft.PowerShell.Management/New-PSDrive.md
+    - New-Service: 7.5/Microsoft.PowerShell.Management/New-Service.md
+    - Pop-Location: 7.5/Microsoft.PowerShell.Management/Pop-Location.md
+    - Push-Location: 7.5/Microsoft.PowerShell.Management/Push-Location.md
+    - Remove-Item: 7.5/Microsoft.PowerShell.Management/Remove-Item.md
+    - Remove-ItemProperty: 7.5/Microsoft.PowerShell.Management/Remove-ItemProperty.md
+    - Remove-PSDrive: 7.5/Microsoft.PowerShell.Management/Remove-PSDrive.md
+    - Remove-Service: 7.5/Microsoft.PowerShell.Management/Remove-Service.md
+    - Rename-Computer: 7.5/Microsoft.PowerShell.Management/Rename-Computer.md
+    - Rename-Item: 7.5/Microsoft.PowerShell.Management/Rename-Item.md
+    - Rename-ItemProperty: 7.5/Microsoft.PowerShell.Management/Rename-ItemProperty.md
+    - Resolve-Path: 7.5/Microsoft.PowerShell.Management/Resolve-Path.md
+    - Restart-Computer: 7.5/Microsoft.PowerShell.Management/Restart-Computer.md
+    - Restart-Service: 7.5/Microsoft.PowerShell.Management/Restart-Service.md
+    - Resume-Service: 7.5/Microsoft.PowerShell.Management/Resume-Service.md
+    - Set-Clipboard: 7.5/Microsoft.PowerShell.Management/Set-Clipboard.md
+    - Set-Content: 7.5/Microsoft.PowerShell.Management/Set-Content.md
+    - Set-Item: 7.5/Microsoft.PowerShell.Management/Set-Item.md
+    - Set-ItemProperty: 7.5/Microsoft.PowerShell.Management/Set-ItemProperty.md
+    - Set-Location: 7.5/Microsoft.PowerShell.Management/Set-Location.md
+    - Set-Service: 7.5/Microsoft.PowerShell.Management/Set-Service.md
+    - Set-TimeZone: 7.5/Microsoft.PowerShell.Management/Set-TimeZone.md
+    - Split-Path: 7.5/Microsoft.PowerShell.Management/Split-Path.md
+    - Start-Process: 7.5/Microsoft.PowerShell.Management/Start-Process.md
+    - Start-Service: 7.5/Microsoft.PowerShell.Management/Start-Service.md
+    - Stop-Computer: 7.5/Microsoft.PowerShell.Management/Stop-Computer.md
+    - Stop-Process: 7.5/Microsoft.PowerShell.Management/Stop-Process.md
+    - Stop-Service: 7.5/Microsoft.PowerShell.Management/Stop-Service.md
+    - Suspend-Service: 7.5/Microsoft.PowerShell.Management/Suspend-Service.md
+    - Test-Connection: 7.5/Microsoft.PowerShell.Management/Test-Connection.md
+    - Test-Path: 7.5/Microsoft.PowerShell.Management/Test-Path.md
+    - Wait-Process: 7.5/Microsoft.PowerShell.Management/Wait-Process.md
+  - Microsoft.PowerShell.Security:
+    - Commands: 7.5/Microsoft.PowerShell.Security/Microsoft.PowerShell.Security.md
+    - About:
+      - about_Certificate_Provider: 7.5/Microsoft.PowerShell.Security/About/about_Certificate_Provider.md
+    - ConvertFrom-SecureString: 7.5/Microsoft.PowerShell.Security/ConvertFrom-SecureString.md
+    - ConvertTo-SecureString: 7.5/Microsoft.PowerShell.Security/ConvertTo-SecureString.md
+    - Get-Acl: 7.5/Microsoft.PowerShell.Security/Get-Acl.md
+    - Get-AuthenticodeSignature: 7.5/Microsoft.PowerShell.Security/Get-AuthenticodeSignature.md
+    - Get-CmsMessage: 7.5/Microsoft.PowerShell.Security/Get-CmsMessage.md
+    - Get-Credential: 7.5/Microsoft.PowerShell.Security/Get-Credential.md
+    - Get-ExecutionPolicy: 7.5/Microsoft.PowerShell.Security/Get-ExecutionPolicy.md
+    - Get-PfxCertificate: 7.5/Microsoft.PowerShell.Security/Get-PfxCertificate.md
+    - New-FileCatalog: 7.5/Microsoft.PowerShell.Security/New-FileCatalog.md
+    - Protect-CmsMessage: 7.5/Microsoft.PowerShell.Security/Protect-CmsMessage.md
+    - Set-Acl: 7.5/Microsoft.PowerShell.Security/Set-Acl.md
+    - Set-AuthenticodeSignature: 7.5/Microsoft.PowerShell.Security/Set-AuthenticodeSignature.md
+    - Set-ExecutionPolicy: 7.5/Microsoft.PowerShell.Security/Set-ExecutionPolicy.md
+    - Test-FileCatalog: 7.5/Microsoft.PowerShell.Security/Test-FileCatalog.md
+    - Unprotect-CmsMessage: 7.5/Microsoft.PowerShell.Security/Unprotect-CmsMessage.md
+  - Microsoft.PowerShell.Utility:
+    - Commands: 7.5/Microsoft.PowerShell.Utility/Microsoft.PowerShell.Utility.md
+    - Add-Member: 7.5/Microsoft.PowerShell.Utility/Add-Member.md
+    - Add-Type: 7.5/Microsoft.PowerShell.Utility/Add-Type.md
+    - Clear-Variable: 7.5/Microsoft.PowerShell.Utility/Clear-Variable.md
+    - Compare-Object: 7.5/Microsoft.PowerShell.Utility/Compare-Object.md
+    - ConvertFrom-CliXml: 7.5/Microsoft.PowerShell.Utility/ConvertFrom-CliXml.md
+    - ConvertFrom-Csv: 7.5/Microsoft.PowerShell.Utility/ConvertFrom-Csv.md
+    - ConvertFrom-Json: 7.5/Microsoft.PowerShell.Utility/ConvertFrom-Json.md
+    - ConvertFrom-Markdown: 7.5/Microsoft.PowerShell.Utility/ConvertFrom-Markdown.md
+    - ConvertFrom-SddlString: 7.5/Microsoft.PowerShell.Utility/ConvertFrom-SddlString.md
+    - ConvertFrom-StringData: 7.5/Microsoft.PowerShell.Utility/ConvertFrom-StringData.md
+    - ConvertTo-CliXml: 7.5/Microsoft.PowerShell.Utility/ConvertTo-CliXml.md
+    - ConvertTo-Csv: 7.5/Microsoft.PowerShell.Utility/ConvertTo-Csv.md
+    - ConvertTo-Html: 7.5/Microsoft.PowerShell.Utility/ConvertTo-Html.md
+    - ConvertTo-Json: 7.5/Microsoft.PowerShell.Utility/ConvertTo-Json.md
+    - ConvertTo-Xml: 7.5/Microsoft.PowerShell.Utility/ConvertTo-Xml.md
+    - Debug-Runspace: 7.5/Microsoft.PowerShell.Utility/Debug-Runspace.md
+    - Disable-PSBreakpoint: 7.5/Microsoft.PowerShell.Utility/Disable-PSBreakpoint.md
+    - Disable-RunspaceDebug: 7.5/Microsoft.PowerShell.Utility/Disable-RunspaceDebug.md
+    - Enable-PSBreakpoint: 7.5/Microsoft.PowerShell.Utility/Enable-PSBreakpoint.md
+    - Enable-RunspaceDebug: 7.5/Microsoft.PowerShell.Utility/Enable-RunspaceDebug.md
+    - Export-Alias: 7.5/Microsoft.PowerShell.Utility/Export-Alias.md
+    - Export-Clixml: 7.5/Microsoft.PowerShell.Utility/Export-Clixml.md
+    - Export-Csv: 7.5/Microsoft.PowerShell.Utility/Export-Csv.md
+    - Export-FormatData: 7.5/Microsoft.PowerShell.Utility/Export-FormatData.md
+    - Export-PSSession: 7.5/Microsoft.PowerShell.Utility/Export-PSSession.md
+    - Format-Custom: 7.5/Microsoft.PowerShell.Utility/Format-Custom.md
+    - Format-Hex: 7.5/Microsoft.PowerShell.Utility/Format-Hex.md
+    - Format-List: 7.5/Microsoft.PowerShell.Utility/Format-List.md
+    - Format-Table: 7.5/Microsoft.PowerShell.Utility/Format-Table.md
+    - Format-Wide: 7.5/Microsoft.PowerShell.Utility/Format-Wide.md
+    - Get-Alias: 7.5/Microsoft.PowerShell.Utility/Get-Alias.md
+    - Get-Culture: 7.5/Microsoft.PowerShell.Utility/Get-Culture.md
+    - Get-Date: 7.5/Microsoft.PowerShell.Utility/Get-Date.md
+    - Get-Error: 7.5/Microsoft.PowerShell.Utility/Get-Error.md
+    - Get-Event: 7.5/Microsoft.PowerShell.Utility/Get-Event.md
+    - Get-EventSubscriber: 7.5/Microsoft.PowerShell.Utility/Get-EventSubscriber.md
+    - Get-FileHash: 7.5/Microsoft.PowerShell.Utility/Get-FileHash.md
+    - Get-FormatData: 7.5/Microsoft.PowerShell.Utility/Get-FormatData.md
+    - Get-Host: 7.5/Microsoft.PowerShell.Utility/Get-Host.md
+    - Get-MarkdownOption: 7.5/Microsoft.PowerShell.Utility/Get-MarkdownOption.md
+    - Get-Member: 7.5/Microsoft.PowerShell.Utility/Get-Member.md
+    - Get-PSBreakpoint: 7.5/Microsoft.PowerShell.Utility/Get-PSBreakpoint.md
+    - Get-PSCallStack: 7.5/Microsoft.PowerShell.Utility/Get-PSCallStack.md
+    - Get-Random: 7.5/Microsoft.PowerShell.Utility/Get-Random.md
+    - Get-Runspace: 7.5/Microsoft.PowerShell.Utility/Get-Runspace.md
+    - Get-RunspaceDebug: 7.5/Microsoft.PowerShell.Utility/Get-RunspaceDebug.md
+    - Get-SecureRandom: 7.5/Microsoft.PowerShell.Utility/Get-SecureRandom.md
+    - Get-TraceSource: 7.5/Microsoft.PowerShell.Utility/Get-TraceSource.md
+    - Get-TypeData: 7.5/Microsoft.PowerShell.Utility/Get-TypeData.md
+    - Get-UICulture: 7.5/Microsoft.PowerShell.Utility/Get-UICulture.md
+    - Get-Unique: 7.5/Microsoft.PowerShell.Utility/Get-Unique.md
+    - Get-Uptime: 7.5/Microsoft.PowerShell.Utility/Get-Uptime.md
+    - Get-Variable: 7.5/Microsoft.PowerShell.Utility/Get-Variable.md
+    - Get-Verb: 7.5/Microsoft.PowerShell.Utility/Get-Verb.md
+    - Group-Object: 7.5/Microsoft.PowerShell.Utility/Group-Object.md
+    - Import-Alias: 7.5/Microsoft.PowerShell.Utility/Import-Alias.md
+    - Import-Clixml: 7.5/Microsoft.PowerShell.Utility/Import-Clixml.md
+    - Import-Csv: 7.5/Microsoft.PowerShell.Utility/Import-Csv.md
+    - Import-LocalizedData: 7.5/Microsoft.PowerShell.Utility/Import-LocalizedData.md
+    - Import-PowerShellDataFile: 7.5/Microsoft.PowerShell.Utility/Import-PowerShellDataFile.md
+    - Import-PSSession: 7.5/Microsoft.PowerShell.Utility/Import-PSSession.md
+    - Invoke-Expression: 7.5/Microsoft.PowerShell.Utility/Invoke-Expression.md
+    - Invoke-RestMethod: 7.5/Microsoft.PowerShell.Utility/Invoke-RestMethod.md
+    - Invoke-WebRequest: 7.5/Microsoft.PowerShell.Utility/Invoke-WebRequest.md
+    - Join-String: 7.5/Microsoft.PowerShell.Utility/Join-String.md
+    - Measure-Command: 7.5/Microsoft.PowerShell.Utility/Measure-Command.md
+    - Measure-Object: 7.5/Microsoft.PowerShell.Utility/Measure-Object.md
+    - New-Alias: 7.5/Microsoft.PowerShell.Utility/New-Alias.md
+    - New-Event: 7.5/Microsoft.PowerShell.Utility/New-Event.md
+    - New-Guid: 7.5/Microsoft.PowerShell.Utility/New-Guid.md
+    - New-Object: 7.5/Microsoft.PowerShell.Utility/New-Object.md
+    - New-TemporaryFile: 7.5/Microsoft.PowerShell.Utility/New-TemporaryFile.md
+    - New-TimeSpan: 7.5/Microsoft.PowerShell.Utility/New-TimeSpan.md
+    - New-Variable: 7.5/Microsoft.PowerShell.Utility/New-Variable.md
+    - Out-File: 7.5/Microsoft.PowerShell.Utility/Out-File.md
+    - Out-GridView: 7.5/Microsoft.PowerShell.Utility/Out-GridView.md
+    - Out-Printer: 7.5/Microsoft.PowerShell.Utility/Out-Printer.md
+    - Out-String: 7.5/Microsoft.PowerShell.Utility/Out-String.md
+    - Read-Host: 7.5/Microsoft.PowerShell.Utility/Read-Host.md
+    - Register-EngineEvent: 7.5/Microsoft.PowerShell.Utility/Register-EngineEvent.md
+    - Register-ObjectEvent: 7.5/Microsoft.PowerShell.Utility/Register-ObjectEvent.md
+    - Remove-Alias: 7.5/Microsoft.PowerShell.Utility/Remove-Alias.md
+    - Remove-Event: 7.5/Microsoft.PowerShell.Utility/Remove-Event.md
+    - Remove-PSBreakpoint: 7.5/Microsoft.PowerShell.Utility/Remove-PSBreakpoint.md
+    - Remove-TypeData: 7.5/Microsoft.PowerShell.Utility/Remove-TypeData.md
+    - Remove-Variable: 7.5/Microsoft.PowerShell.Utility/Remove-Variable.md
+    - Select-Object: 7.5/Microsoft.PowerShell.Utility/Select-Object.md
+    - Select-String: 7.5/Microsoft.PowerShell.Utility/Select-String.md
+    - Select-Xml: 7.5/Microsoft.PowerShell.Utility/Select-Xml.md
+    - Send-MailMessage: 7.5/Microsoft.PowerShell.Utility/Send-MailMessage.md
+    - Set-Alias: 7.5/Microsoft.PowerShell.Utility/Set-Alias.md
+    - Set-Date: 7.5/Microsoft.PowerShell.Utility/Set-Date.md
+    - Set-MarkdownOption: 7.5/Microsoft.PowerShell.Utility/Set-MarkdownOption.md
+    - Set-PSBreakpoint: 7.5/Microsoft.PowerShell.Utility/Set-PSBreakpoint.md
+    - Set-TraceSource: 7.5/Microsoft.PowerShell.Utility/Set-TraceSource.md
+    - Set-Variable: 7.5/Microsoft.PowerShell.Utility/Set-Variable.md
+    - Show-Command: 7.5/Microsoft.PowerShell.Utility/Show-Command.md
+    - Show-Markdown: 7.5/Microsoft.PowerShell.Utility/Show-Markdown.md
+    - Sort-Object: 7.5/Microsoft.PowerShell.Utility/Sort-Object.md
+    - Start-Sleep: 7.5/Microsoft.PowerShell.Utility/Start-Sleep.md
+    - Tee-Object: 7.5/Microsoft.PowerShell.Utility/Tee-Object.md
+    - Test-Json: 7.5/Microsoft.PowerShell.Utility/Test-Json.md
+    - Trace-Command: 7.5/Microsoft.PowerShell.Utility/Trace-Command.md
+    - Unblock-File: 7.5/Microsoft.PowerShell.Utility/Unblock-File.md
+    - Unregister-Event: 7.5/Microsoft.PowerShell.Utility/Unregister-Event.md
+    - Update-FormatData: 7.5/Microsoft.PowerShell.Utility/Update-FormatData.md
+    - Update-List: 7.5/Microsoft.PowerShell.Utility/Update-List.md
+    - Update-TypeData: 7.5/Microsoft.PowerShell.Utility/Update-TypeData.md
+    - Wait-Debugger: 7.5/Microsoft.PowerShell.Utility/Wait-Debugger.md
+    - Wait-Event: 7.5/Microsoft.PowerShell.Utility/Wait-Event.md
+    - Write-Debug: 7.5/Microsoft.PowerShell.Utility/Write-Debug.md
+    - Write-Error: 7.5/Microsoft.PowerShell.Utility/Write-Error.md
+    - Write-Host: 7.5/Microsoft.PowerShell.Utility/Write-Host.md
+    - Write-Information: 7.5/Microsoft.PowerShell.Utility/Write-Information.md
+    - Write-Output: 7.5/Microsoft.PowerShell.Utility/Write-Output.md
+    - Write-Progress: 7.5/Microsoft.PowerShell.Utility/Write-Progress.md
+    - Write-Verbose: 7.5/Microsoft.PowerShell.Utility/Write-Verbose.md
+    - Write-Warning: 7.5/Microsoft.PowerShell.Utility/Write-Warning.md
+  - Microsoft.WSMan.Management:
+    - Commands: 7.5/Microsoft.WSMan.Management/Microsoft.WSMan.Management.md
+    - About:
+      - about_WS-Management_Cmdlets: 7.5/Microsoft.WSMan.Management/About/about_WS-Management_Cmdlets.md
+      - about_WSMan_Provider: 7.5/Microsoft.WSMan.Management/About/about_WSMan_Provider.md
+    - Connect-WSMan: 7.5/Microsoft.WSMan.Management/Connect-WSMan.md
+    - Disable-WSManCredSSP: 7.5/Microsoft.WSMan.Management/Disable-WSManCredSSP.md
+    - Disconnect-WSMan: 7.5/Microsoft.WSMan.Management/Disconnect-WSMan.md
+    - Enable-WSManCredSSP: 7.5/Microsoft.WSMan.Management/Enable-WSManCredSSP.md
+    - Get-WSManCredSSP: 7.5/Microsoft.WSMan.Management/Get-WSManCredSSP.md
+    - Get-WSManInstance: 7.5/Microsoft.WSMan.Management/Get-WSManInstance.md
+    - Invoke-WSManAction: 7.5/Microsoft.WSMan.Management/Invoke-WSManAction.md
+    - New-WSManInstance: 7.5/Microsoft.WSMan.Management/New-WSManInstance.md
+    - New-WSManSessionOption: 7.5/Microsoft.WSMan.Management/New-WSManSessionOption.md
+    - Remove-WSManInstance: 7.5/Microsoft.WSMan.Management/Remove-WSManInstance.md
+    - Set-WSManInstance: 7.5/Microsoft.WSMan.Management/Set-WSManInstance.md
+    - Set-WSManQuickConfig: 7.5/Microsoft.WSMan.Management/Set-WSManQuickConfig.md
+    - Test-WSMan: 7.5/Microsoft.WSMan.Management/Test-WSMan.md
+  - PSDiagnostics:
+    - Commands: 7.5/PSDiagnostics/PSDiagnostics.md
+    - Disable-PSTrace: 7.5/PSDiagnostics/Disable-PSTrace.md
+    - Disable-PSWSManCombinedTrace: 7.5/PSDiagnostics/Disable-PSWSManCombinedTrace.md
+    - Disable-WSManTrace: 7.5/PSDiagnostics/Disable-WSManTrace.md
+    - Enable-PSTrace: 7.5/PSDiagnostics/Enable-PSTrace.md
+    - Enable-PSWSManCombinedTrace: 7.5/PSDiagnostics/Enable-PSWSManCombinedTrace.md
+    - Enable-WSManTrace: 7.5/PSDiagnostics/Enable-WSManTrace.md
+    - Get-LogProperties: 7.5/PSDiagnostics/Get-LogProperties.md
+    - Set-LogProperties: 7.5/PSDiagnostics/Set-LogProperties.md
+    - Start-Trace: 7.5/PSDiagnostics/Start-Trace.md
+    - Stop-Trace: 7.5/PSDiagnostics/Stop-Trace.md
+  - PSReadLine:
+    - Commands: 7.5/PSReadLine/PSReadLine.md
+    - About:
+      - about_PSReadLine: 7.5/PSReadLine/About/about_PSReadLine.md
+      - about_PSReadLine_Functions: 7.5/PSReadLine/About/about_PSReadLine_Functions.md
+      - about_PSReadLine_Release_Notes: 7.5/PSReadLine/About/about_PSReadLine_Release_Notes.md
+    - Get-PSReadLineKeyHandler: 7.5/PSReadLine/Get-PSReadLineKeyHandler.md
+    - Get-PSReadLineOption: 7.5/PSReadLine/Get-PSReadLineOption.md
+    - PSConsoleHostReadLine: 7.5/PSReadLine/PSConsoleHostReadLine.md
+    - Remove-PSReadLineKeyHandler: 7.5/PSReadLine/Remove-PSReadLineKeyHandler.md
+    - Set-PSReadLineKeyHandler: 7.5/PSReadLine/Set-PSReadLineKeyHandler.md
+    - Set-PSReadLineOption: 7.5/PSReadLine/Set-PSReadLineOption.md
+  - ThreadJob:
+    - Commands: 7.5/ThreadJob/ThreadJob.md
+    - Start-ThreadJob: 7.5/ThreadJob/Start-ThreadJob.md
+
+exclude_docs: |
+  /5.1/
+  /7.2/
+  /7.4/
+  /includes/
+  /module/
+
+not_in_nav: |
+  /README.md
+  /docs-conceptual/developer/scheduling-jobs-with-the-windows-powershell-api.md
+
+plugins:
+- minify:
+    minify_html: true
+    minify_js: true
+    minify_css: true
+    htmlmin_opts:
+      remove_comments: true
+    cache_safe: true
+- search
+
+markdown_extensions:
+- mdx_truly_sane_lists
+- pymdownx.highlight:
+    anchor_linenums: true
+    linenums: true
+    line_spans: __span
+    pygments_lang_class: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.superfences
+- toc:
+    permalink: true

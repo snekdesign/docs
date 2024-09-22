@@ -2,6 +2,10 @@
 	path = CppCoreGuidelines/docs
 	url = git@github.com:isocpp/CppCoreGuidelines.git
 	branch = master
+[submodule "PowerShell"]
+	path = PowerShell/docs
+	url = git@github.com:MicrosoftDocs/PowerShell-Docs.git
+	branch = live
 [submodule "styleguide"]
 	path = styleguide/docs
 	url = git@github.com:google/styleguide.git
