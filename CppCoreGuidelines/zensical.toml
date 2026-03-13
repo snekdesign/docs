@@ -1,0 +1,39 @@
+[project]
+site_name = 'C++ Core Guidelines'
+repo_name = 'isocpp/CppCoreGuidelines'
+repo_url = 'https://github.com/isocpp/CppCoreGuidelines'
+nav = [
+    { Home = 'README.md' },
+    { Contents = 'CppCoreGuidelines.md' },
+    { FAQ = 'docs/gsl-intro.md' },
+    { Talks = 'talks/README.md' },
+]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+linenums = true
+line_spans = '__span'
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+
+[project.markdown_extensions.toc]
+baselevel = 2
+permalink = true
+toc_depth = 4
+
+[project.theme]
+favicon = 'cpp_core_guidelines_16b.png'
+logo = 'cpp_core_guidelines_16b.png'
+features = [
+    'header.autohide',
+    'navigation.tabs',
+    'navigation.top',
+    'toc.follow',
+    'toc.integrate',
+]
+
+[project.theme.icon]
+repo = 'fontawesome/brands/github'
