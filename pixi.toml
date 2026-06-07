@@ -9,7 +9,7 @@ jsmin = '>=3.0.1'
 mdx_truly_sane_lists = '>=1.3.0'
 mkdocs-macros-plugin = '>=1.0.0'
 mkdocs-material = '==9.6.20'
-zensical = '>=0.0.26'
+zensical = '>=0.0.41'
 
 [pypi-dependencies]
 mkdocs-minify-plugin = '>=0.7.0'
