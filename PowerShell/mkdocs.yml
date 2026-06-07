@@ -1356,12 +1356,10 @@ not_in_nav: |
 
 plugins:
 - minify:
-    minify_html: true
     minify_js: true
     minify_css: true
-    htmlmin_opts:
-      remove_comments: true
     cache_safe: true
+- minify_html
 - search
 
 markdown_extensions:
