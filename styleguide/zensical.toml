@@ -1,0 +1,67 @@
+[project]
+site_name = 'Google Style Guides'
+repo_name = 'google/styleguide'
+repo_url = 'https://github.com/google/styleguide'
+nav = [
+    { Home = 'README.md' },
+    { AngularJS = 'angularjs-google-style.html' },
+    { 'Common Lisp' = 'lispguide.xml' },
+    { 'C++' = 'cppguide.html' },
+    { 'C#' = 'csharp-style.md' },
+    { Go = [ { Overview = 'go/index.md' }, 'go/guide.md', 'go/decisions.md', 'go/best-practices.md' ] },
+    { 'HTML/CSS' = 'htmlcssguide.html' },
+    { JavaScript = 'jsguide.html' },
+    { Java = 'javaguide.html' },
+    { JSON = 'jsoncstyleguide.xml' },
+    { Markdown = [ { Overview = 'docguide/README.md' }, 'docguide/style.md', 'docguide/best_practices.md', 'docguide/READMEs.md', 'docguide/philosophy.md' ] },
+    { Objective-C = 'objcguide.md' },
+    { Python = 'pyguide.md' },
+    { R = 'Rguide.md' },
+    { Shell = 'shellguide.md' },
+    { TypeScript = 'tsguide.html' },
+    { Vim = 'vimscriptguide.xml' },
+]
+
+[project.markdown_extensions.def_list]
+[project.markdown_extensions.footnotes]
+[project.markdown_extensions.md_in_html]
+
+[project.markdown_extensions.pymdownx.highlight]
+anchor_linenums = true
+linenums = true
+line_spans = '__span'
+pygments_lang_class = true
+
+[project.markdown_extensions.pymdownx.inlinehilite]
+[project.markdown_extensions.pymdownx.snippets]
+[project.markdown_extensions.pymdownx.superfences]
+[project.markdown_extensions.pymdownx.tilde]
+
+[project.markdown_extensions.toc]
+permalink = true
+toc_depth = 4
+
+[project.markdown_extensions.zensical.extensions.macros]
+j2_variable_start_string = '${{'
+on_error_fail = true
+on_undefined = "strict"
+
+[project.theme]
+favicon = 'favicon.ico'
+logo = 'favicon.ico'
+features = [
+    'header.autohide',
+    'navigation.tabs',
+    'navigation.top',
+    'toc.follow',
+    'toc.integrate',
+]
+
+[project.theme.icon]
+repo = 'fontawesome/brands/github'
+
+[project.validation]
+unresolved_references = false
+unused_definitions = false
+shadowed_definitions = false
+invalid_link_anchors = false
